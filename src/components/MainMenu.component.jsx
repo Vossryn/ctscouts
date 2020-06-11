@@ -13,7 +13,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 // import MenuIcon from '@material-ui/icons/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 
-import Logo from '../assets/images/boy_scouts_of_america_logo.png';
+import SiteHeader from './SiteHeader.component'
 
 const useStyles = makeStyles({
     root: {
@@ -22,17 +22,6 @@ const useStyles = makeStyles({
     },
     toolbar: {
         minHeight: "inherit"
-    },
-    logoWrapper: {
-        width: "100%",
-        height: "75px",
-        textAlign: "center",
-        backgroundColor: "white"
-    },
-    bsalogo: {
-        maxHeight: "200px",
-        marginTop: "-59px",
-        marginBottom: "-59px"
     },
     hidden: {
         height: "0px",
@@ -52,7 +41,7 @@ export default function MainMenu(props) {
 
     const trigger = useScrollTrigger({
         disableHysteresis: true,
-        threshold: 100
+        threshold: 75
     });
 
     const handleChange = (event, newValue) => {
@@ -73,14 +62,8 @@ export default function MainMenu(props) {
                 position="fixed"
                 color="inherit"
             >
-                    <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar]}>
-                        <div className={classes.logoWrapper}>
-                            <img
-                                src={Logo}
-                                className={classes.bsalogo}
-                                alt="boy_scouts_of_america_logo"
-                            />
-                        </div>
+                    <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
+                        <SiteHeader />
                     </Toolbar>
              
                 <Paper className={classes.root}>

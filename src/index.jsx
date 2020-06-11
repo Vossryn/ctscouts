@@ -5,6 +5,8 @@ import { responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Routes from "./routes";
+import MainMenu from "./components/MainMenu.component"
+import Footer from "./components/Footer.component"
 
 import "./styles.scss";
 import 'fontsource-roboto';
@@ -19,7 +21,9 @@ ReactDOM.render(
   <BrowserRouter >
     <CssBaseline />
     <ThemeProvider theme={newTheme}>
+      <MainMenu />
       <Routes />
+      <Footer />
     </ThemeProvider>
   </BrowserRouter >,
   document.getElementById('root')
