@@ -10,6 +10,7 @@ import Footer from "./components/Footer.component"
 
 import "./styles.scss";
 import 'fontsource-roboto';
+import 'fontsource-marcellus';
 
 import * as serviceWorker from "./serviceWorker";
 

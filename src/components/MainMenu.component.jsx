@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
@@ -35,9 +35,28 @@ const useStyles = makeStyles({
     }
 });
 
+const menuItems = [
+    { label: "Home", link: "/" },
+    { label: "Calendar", link: "/calendar" },
+    { label: "Find a Unit", link: "/find_a_unit" },
+    { label: "Camping", link: "/camping" },
+    { label: "Resources", link: "/resources" }
+]
+
+let currentSite = 0 ;
+    
+var locArr = window.location.pathname.split("/");
+menuItems.find((item, index) => {
+    if (item.link === `/${locArr[1]}`) {
+        currentSite = index;
+        return true;
+    }
+    return false;
+})
+
 export default function MainMenu(props) {
-    const classes = useStyles();
-    const [tabsvalue, setTabsvalue] = React.useState(0);
+    const classes = useStyles(); 
+    const [tabsvalue, setTabsvalue] = useState(currentSite);
 
     const trigger = useScrollTrigger({
         disableHysteresis: true,
@@ -48,24 +67,16 @@ export default function MainMenu(props) {
         setTabsvalue(newValue);
     };
 
-    const menuItems = [
-        { label: "Home", link: "/" },
-        { label: "Calendar", link: "/calendar" },
-        { label: "Find a Unit", link: "/find_a_unit" },
-        { label: "Camping", link: "/camping" },
-        { label: "Resources", link: "/resources" }
-    ]
-
     return (
         <div className={classes.root}>
             <AppBar
                 position="fixed"
                 color="inherit"
             >
-                    <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
-                        <SiteHeader />
-                    </Toolbar>
-             
+                <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
+                    <SiteHeader />
+                </Toolbar>
+
                 <Paper className={classes.root}>
                     <Tabs
                         value={tabsvalue}
