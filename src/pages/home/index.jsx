@@ -6,6 +6,9 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
+
 import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +31,21 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: "#fff7f0"
     },
     downloadnowlist: {
-        marginTop: "0px"
+        marginTop: "0px",
+        listStyleType: "none"
+    },
+    downloadnowitem: {
+        marginLeft: "-20px",
+        listStyleType: "none"
+    },
+    downloadsection: {
+        padding: "10px",
+        marginTop: "10px",
+        backgroundColor: "#fff7f0"
+    },
+    icons: {
+        marginBottom: "-5px",
+        marginRight: "10px"
     }
 }));
 
@@ -47,22 +64,22 @@ export default function HomePage() {
                             <Typography variant="h4" className={classes.bash4}>
                                 Welcome to Croatan Trails!
                             </Typography>
-                            <hr className={classes.hrmargin}/>
-                            <Typography variant="body1">
+                            <hr className={classes.hrmargin} />
+                            <Typography variant="h6">
                                 Located along the Crystal Coast in eastern North Carolina, the Croatan Trails (CT) District is one of nine making up the East Carolina Council, and serves Carteret and east Craven Counties, and is home to Coree Chapter of the Order of the Arrow.
                             </Typography>
-                            <Link 
+                            <Link
                                 variant="body2"
-                                hreg={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
+                                href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
                                 Add me to CT District's e-mail list
                             </Link>
                         </Grid>
                         <Grid item xs={4}>
-                            <Paper>
+                            <Paper elevation={3}>
                                 <Container className={classes.downloadnow}>
                                     <Grid container spacing={0}>
                                         <Grid item xs={12}>
-                                            <Typography 
+                                            <Typography
                                                 variant="body1"
                                                 className={classes.subheader}
                                             >
@@ -71,30 +88,81 @@ export default function HomePage() {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <ul className={classes.downloadnowlist}>
-                                                <li>
-                                                    <Typography variant="body2">
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                                         2020 ITOLS
-                                                    </Typography>
+                                                    </Link>
                                                 </li>
-                                                <li>
-                                                    <Typography variant="body2">
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                                         LNT Trainer Course
-                                                    </Typography>
+                                                    </Link>
                                                 </li>
-                                                <li>
-                                                    <Typography variant="body2">
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/calendar_CTD_2020.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                                         2020 District Calendar
-                                                    </Typography>
+                                                    </Link>
                                                 </li>
-                                                <li>
-                                                    <Typography variant="body2">
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                                         2019 Merit Badge Counselors
-                                                    </Typography>
+                                                    </Link>
                                                 </li>
-                                                <li>
-                                                    <Typography variant="body2">
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/calendar_CTD_2019.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                                         2019 District Calendar
-                                                    </Typography>
+                                                    </Link>
+                                                </li>
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/524-406A.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                                                        BSA Application (English)
+                                                    </Link>
+                                                </li>
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="downloads/pdf/524-423.pdf">
+                                                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                                                        BSA Application (Spanish)
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Typography
+                                                variant="body1"
+                                                className={classes.subheader}
+                                            >
+                                                Register for an Event Now:
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <ul className={classes.downloadnowlist}>
+                                                <li className={classes.downloadnowitem}>
+                                                    <Link 
+                                                        variant="body2" 
+                                                        href="https://www.tentaroo.com/ecc/">
+                                                        <OpenInNewSharpIcon fontSize="small" className={classes.icons} />
+                                                        Register for an event online
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </Grid>
@@ -112,30 +180,38 @@ export default function HomePage() {
                             </Paper>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography variant="h4">
-                                <Skeleton variant="text"></Skeleton>
+                            <Typography variant="h4" className={classes.bash4}>
+                                Cub Scouts
                             </Typography>
+                            <hr className={classes.hrmargin} />
                             <Typography variant="body1">
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
+                                Cub Scouting is a year-round program whose mission is to develop character and ethical decision-making skills for youth in kindergarten through fifth grades (5 to 10 years old).
                             </Typography>
+                            <Link
+                                variant="body2"
+                                href={'https://beascout.scouting.org'}
+                            >
+                                Sign up today!
+                            </Link>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={8}>
-                            <Typography variant="h4">
-                                <Skeleton variant="text"></Skeleton>
+                            <Typography variant="h4" className={classes.bash4}>
+                                Boy Scouts
                             </Typography>
+                            <hr className={classes.hrmargin} />
                             <Typography variant="body1">
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
+                                Boy Scouting, is a year-round program for youth 11–17 designed to build character, citizenship, and personal fitness through a vigorous outdoor program and peer group leadership with the counsel of an adult Scoutmaster.
                             </Typography>
+                            <Link
+                                variant="body2"
+                                href={'https://beascout.scouting.org'}
+                            >
+                                Sign up today!
+                            </Link>
                         </Grid>
                         <Grid item xs={4}>
                             <Paper>
@@ -152,19 +228,23 @@ export default function HomePage() {
                             </Paper>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography variant="h4">
-                                <Skeleton variant="text"></Skeleton>
+                            <Typography variant="h4" className={classes.bash4}>
+                                Adult Leaders
                             </Typography>
+                            <hr className={classes.hrmargin} />
                             <Typography variant="body1">
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
-                                <Skeleton variant="text"></Skeleton>
+                                Behind every trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean and reverent Scout is a long line of committed volunteers who share those same traits. Volunteering has always been the very bedrock of the Scouting program. Watching kids grow is one thing — leading them through the process is a whole new experience all together.
                             </Typography>
+                            <Link
+                                variant="body2"
+                                href={'https://beascout.scouting.org/Volunteer.aspx'}
+                            >
+                                Become a Leader!
+                            </Link>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-        </Container>
+        </Container >
     )
 }
