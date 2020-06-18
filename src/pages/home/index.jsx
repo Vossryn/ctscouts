@@ -13,9 +13,10 @@ import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        paddingBottom: "20px"
     },
-    bash4: {
+    bsah4: {
         fontFamily: "Marcellus",
         color: '#003f87'
     },
@@ -61,7 +62,7 @@ export default function HomePage() {
                 <Grid item xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={8}>
-                            <Typography variant="h4" className={classes.bash4}>
+                            <Typography variant="h4" className={classes.bsah4}>
                                 Welcome to Croatan Trails!
                             </Typography>
                             <hr className={classes.hrmargin} />
@@ -180,7 +181,7 @@ export default function HomePage() {
                             </Paper>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography variant="h4" className={classes.bash4}>
+                            <Typography variant="h4" className={classes.bsah4}>
                                 Cub Scouts
                             </Typography>
                             <hr className={classes.hrmargin} />
@@ -199,7 +200,7 @@ export default function HomePage() {
                 <Grid item xs={12}>
                     <Grid container spacing={2}>
                         <Grid item xs={8}>
-                            <Typography variant="h4" className={classes.bash4}>
+                            <Typography variant="h4" className={classes.bsah4}>
                                 Boy Scouts
                             </Typography>
                             <hr className={classes.hrmargin} />
@@ -228,7 +229,7 @@ export default function HomePage() {
                             </Paper>
                         </Grid>
                         <Grid item xs={8}>
-                            <Typography variant="h4" className={classes.bash4}>
+                            <Typography variant="h4" className={classes.bsah4}>
                                 Adult Leaders
                             </Typography>
                             <hr className={classes.hrmargin} />

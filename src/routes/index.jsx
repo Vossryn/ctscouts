@@ -9,6 +9,8 @@ import Camping from "../pages/camping";
 import FindaUnit from "../pages/find_a_unit";
 import Resources from "../pages/resources";
 
+import ScrollToTop from "../components/Scrolltotop.component";
+
 // import PrivateRoute from "./privateRoute";
 
 const useStyles = makeStyles({
@@ -25,6 +27,7 @@ export default function Router() {
 
     return (
         <div className={classes.root}>
+            <ScrollToTop />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/calendar" component={Calendar} />
