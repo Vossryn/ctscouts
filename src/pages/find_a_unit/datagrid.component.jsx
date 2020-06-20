@@ -17,8 +17,10 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1
     },
     toolbar: {
-        backgroundColor: '#003f87',
-        color: theme.palette.common.white
+        color: '#003f87'
+    },
+    fontFamily: {
+        fontFamily: "Marcellus"
     }
 }));
 
@@ -48,7 +50,7 @@ export default function Datagrid(props) {
     return (
         <TableContainer component={Paper} elevation={3}>
             <ToolBar className={classes.toolbar}>
-                <Typography variant="h5">
+                <Typography variant="h5" className={classes.fontFamily}>
                     {tableHeader}
                 </Typography>
             </ToolBar>
