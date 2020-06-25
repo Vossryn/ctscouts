@@ -9,7 +9,9 @@ import Skeleton from '@material-ui/lab/Skeleton';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        paddingTop: "20px",
+        paddingBottom: "20px"
     }
 }));
 
@@ -17,7 +19,7 @@ export default function CampingPage() {
     const classes = useStyles();
 
     return (
-        <Container className={classes.root} maxWidth="md" component={Paper}>
+        <Container className={classes.root} maxWidth="lg" component={Paper}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Skeleton variant="rect" height={250}></Skeleton>

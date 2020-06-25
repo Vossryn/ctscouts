@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
     },
     fontFamily: {
         fontFamily: "Marcellus"
+    },
+    leaderWidth: {
+        width: '150px'
     }
 }));
 
@@ -64,7 +67,7 @@ export default function Datagrid(props) {
                                         'Ship'
                             }
                         </StyledTableCell>
-                        <StyledTableCell>
+                        <StyledTableCell className={classes.leaderWidth}>
                             {
                                 (type === 'cub') ? 'Cubmaster' :
                                     (type === 'boy') ? 'Scoutmaster' :

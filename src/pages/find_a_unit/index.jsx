@@ -11,6 +11,7 @@ import Datagrid from './datagrid.component';
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
+        paddingTop: "20px",
         paddingBottom: "20px"
     },
     bsah4: {
@@ -51,7 +52,7 @@ export default function FindaunitPage() {
     ];
 
     return (
-        <Container className={classes.root} maxWidth="md" component={Paper}>
+        <Container className={classes.root} maxWidth="lg" component={Paper}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Typography variant="h4" className={classes.bsah4}>
