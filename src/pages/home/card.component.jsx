@@ -31,6 +31,7 @@ export default function CampingPage(props) {
     return (
         <Card className={classes.root} variant="outlined">
             <CardMedia>
+                {img}
                 <Skeleton variant="rect" height={150}/>
             </CardMedia>
             <CardContent className={classes.content}>

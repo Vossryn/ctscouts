@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
 
 import Home from "../pages/home";
 import Calendar from "../pages/calendar";
@@ -16,8 +18,8 @@ import ScrollToTop from "../components/Scrolltotop.component";
 const useStyles = makeStyles({
     root: {
         paddingTop: "150px",
-        paddingBottom: "30px",
-        backgroundColor: "#f5f5f5",
+        paddingBottom: "40px",
+        marginBottom: "-10px",
         minHeight: "calc(100vh - 40px)"
     }
 });
@@ -26,7 +28,7 @@ export default function Router() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <Container className={classes.root} maxWidth="lg" component={Paper}>
             <ScrollToTop />
             <Switch>
                 <Route exact path="/" component={Home} />
@@ -40,6 +42,6 @@ export default function Router() {
 
                 <Redirect to="/" />
             </Switch>
-        </div>
+        </Container>
     )
 }
