@@ -35,6 +35,19 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const downloadNowCustomEntries = [
+    {
+        sectionTitle: "East Carolina Council Events:",
+        items: [
+            {
+                text: "ECC Events",
+                link: "http://www.eccbsa.org/Event%20Flyers",
+                iconType: "OpenInNewSharpIcon"
+            }
+        ]
+    }
+]
+
 export default function CalendarPage() {
     const classes = useStyles();
 
@@ -184,7 +197,7 @@ export default function CalendarPage() {
                 </ul>
             </div>
             <div className="grid-download-now">
-                <DownloadNowBlock />
+                <DownloadNowBlock customEntries={downloadNowCustomEntries} />
             </div>
         </div>
     )

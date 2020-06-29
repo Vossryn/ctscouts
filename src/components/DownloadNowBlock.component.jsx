@@ -48,8 +48,10 @@ const useStyles = makeStyles({
     }
 });
 
-export default function Footer() {
+export default function Footer(props) {
     const classes = useStyles();
+
+    const { customEntries } = props;
 
     return (
         <Paper elevation={2}>
@@ -129,7 +131,7 @@ export default function Footer() {
                             className={classes.subheader}
                         >
                             Register for an Event Now:
-                    </Typography>
+                        </Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <ul className={classes.downloadnowlist}>
@@ -145,6 +147,35 @@ export default function Footer() {
                             </li>
                         </ul>
                     </Grid>
+                    {(typeof customEntries === 'undefined') ? null : customEntries.map(entry => (
+                        <div>
+                            <Grid item xs={12}>
+                                <Typography
+                                    variant="body1"
+                                    className={classes.subheader}
+                                >
+                                    {entry.sectionTitle}
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <ul className={classes.downloadnowlist}>
+                                    {entry.items.map(item => (
+                                        <li className={classes.downloadnowitem}>
+                                            <Link
+                                                variant="body2"
+                                                target="_blank"
+                                                rel="noopener"
+                                                href={item.link}>
+                                                {(item.iconType === "OpenInNewSharpIcon") ? <OpenInNewSharpIcon fontSize="small" className={classes.icons} /> : null}
+                                                {(item.iconType === "PictureAsPdfIcon") ? <PictureAsPdfIcon fontSize="small" className={classes.icons} /> : null}
+                                                {item.text}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Grid>
+                        </div>
+                    ))}
                 </Grid>
             </Container>
         </Paper>
