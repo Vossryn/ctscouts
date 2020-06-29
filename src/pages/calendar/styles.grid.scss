@@ -12,20 +12,24 @@
     grid-gap: 15px;
   }
 
+  .grid-calendar-header-image {
+    grid-area: 1 / 1 / 1 / 13; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+  }
+
   .grid-event-bar {
-    grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    grid-area: 2 / 1 / 7 / 4;
   }
 
   .grid-calendar {
-    grid-area: 1 / 4 / 4 / 13;
+    grid-area: 2 / 4 / 5 / 13;
   }
 
   .grid-add-calendar {
-    grid-area: 4 / 4 / 4 / 10;
+    grid-area: 5 / 4 / 5 / 10;
   }
 
   .grid-download-now {
-    grid-area: 4 / 10 / 4 / 13;
+    grid-area: 5 / 10 / 5 / 13;
   }
     
 }
@@ -44,20 +48,24 @@
       grid-gap: 15px;
     }
   
+    .grid-calendar-header-image {
+      grid-area: 1 / 1 / 1 / 13; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
     .grid-event-bar {
-      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+      grid-area: 2 / 1 / 7 / 4;
     }
   
     .grid-calendar {
-      grid-area: 1 / 4 / 4 / 13;
+      grid-area: 2 / 4 / 5 / 13;
     }
   
     .grid-add-calendar {
-      grid-area: 4 / 4 / 4 / 10;
+      grid-area: 5 / 4 / 5 / 10;
     }
   
     .grid-download-now {
-      grid-area: 4 / 10 / 4 / 13;
+      grid-area: 5 / 10 / 5 / 13;
     }
     
   }
@@ -76,20 +84,24 @@
       grid-gap: 15px;
     }
   
+    .grid-calendar-header-image {
+      grid-area: 1 / 1 / 1 / 13; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
     .grid-event-bar {
-      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+      grid-area: 2 / 1 / 7 / 4;
     }
   
     .grid-calendar {
-      grid-area: 1 / 4 / 4 / 13;
+      grid-area: 2 / 4 / 5 / 13;
     }
   
     .grid-add-calendar {
-      grid-area: 4 / 4 / 4 / 10;
+      grid-area: 5 / 4 / 5 / 10;
     }
   
     .grid-download-now {
-      grid-area: 4 / 10 / 4 / 13;
+      grid-area: 5 / 10 / 5 / 13;
     }
     
   }
@@ -108,20 +120,24 @@
       grid-gap: 15px;
     }
   
+    .grid-calendar-header-image {
+      grid-area: 1 / 1 / 1 / 13; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
     .grid-event-bar {
-      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+      grid-area: 2 / 1 / 7 / 4;
     }
   
     .grid-calendar {
-      grid-area: 1 / 4 / 4 / 13;
+      grid-area: 2 / 4 / 5 / 13;
     }
   
     .grid-add-calendar {
-      grid-area: 4 / 4 / 4 / 10;
+      grid-area: 5 / 4 / 5 / 10;
     }
   
     .grid-download-now {
-      grid-area: 4 / 10 / 4 / 13;
+      grid-area: 5 / 10 / 5 / 13;
     }
     
   }

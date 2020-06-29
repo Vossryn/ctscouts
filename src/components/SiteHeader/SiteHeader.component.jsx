@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // import { Link as RouterLink } from 'react-router-dom';
 
-import Logo from '../assets/images/boy_scouts_of_america_logo.png';
+import Logo from '../../assets/images/boy_scouts_of_america_logo.png';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
@@ -20,17 +20,20 @@ const useStyles = makeStyles({
     },
     bsalogo: {
         height: "75px",
-        marginTop: "4px"
+        marginTop: "4px",
+        float: "left"
     },
     spacer: {
-        width: "3px",
-        height: "calc(100% - 20px)",
+        width: "2px",
+        height: "60px",
         backgroundColor: "#003f87",
         marginTop: "10px",
-        marginRight: "5px"
+        marginRight: "5px",
+        float: "left"
     },
     districtClassContainer: {
-        marginTop: "10px"
+        marginTop: "10px",
+        float: "left"
     },
     districtClass: {
         fontFamily: "Marcellus",
@@ -44,16 +47,12 @@ export default function MainMenu() {
     return (
         <Container className={classes.root} maxWidth="md">
             <div className={classes.logocontainer}>
-                <div>
-                    <img
-                        src={Logo}
-                        className={classes.bsalogo}
-                        alt="boy_scouts_of_america_logo"
-                    />
-                </div>
-                <div>
-                    <div className={classes.spacer}></div>
-                </div>
+                <img
+                    src={Logo}
+                    className={classes.bsalogo}
+                    alt="boy_scouts_of_america_logo"
+                />
+                <div className={classes.spacer}></div>
                 <div className={classes.districtClassContainer}>
                     <Typography variant="h5" className={classes.districtClass}>
                         Croatan Trails District&#44;

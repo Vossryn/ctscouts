@@ -54,7 +54,7 @@ export default function HomePage() {
 
     return (
         <div className="grid-home-container">
-            <div className="grid-header-image">
+            <div className="grid-home-header-image">
                 <Skeleton variant="rect" height={250}></Skeleton>
             </div>
             <div className="grid-body-1">

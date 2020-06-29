@@ -5,10 +5,12 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
+import Skeleton from '@material-ui/lab/Skeleton';
+
 import BigCalendar from './BigCalendar.component';
 import DownloadNowBlock from '../../components/DownloadNowBlock.component';
 
-import './styles.scss';
+import './styles.grid.scss';
 
 const useStyles = makeStyles(theme => ({
     claendarContainer: {
@@ -53,6 +55,9 @@ export default function CalendarPage() {
 
     return (        
         <div className="grid-calendar-container">
+            <div className="grid-calendar-header-image">
+                <Skeleton variant="rect" height={250}></Skeleton>
+            </div>
             <div className="grid-event-bar">
                 <Typography variant="h4" className={classes.bsah4}>
                     Monthly Events

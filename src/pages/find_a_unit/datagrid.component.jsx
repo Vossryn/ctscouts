@@ -51,7 +51,7 @@ export default function Datagrid(props) {
     const { tableHeader, rows, type } = props;
 
     return (
-        <TableContainer component={Paper} elevation={3}>
+        <TableContainer component={Paper} elevation={2}>
             <ToolBar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.fontFamily}>
                     {tableHeader}
