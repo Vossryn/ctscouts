@@ -1,7 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 
 import Datagrid from './datagrid.component';
@@ -50,8 +49,8 @@ export default function FindaunitPage() {
     ];
 
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
+        <div>
+            <div>
                 <Typography variant="h4" className={classes.bsah4}>
                     Join Scouting Today!
                     </Typography>
@@ -78,16 +77,16 @@ export default function FindaunitPage() {
                             </Typography>
                     </li>
                 </ul>
-            </Grid>
-            <Grid item xs={12}>
+            </div>
+            <div>
                 <Datagrid type="cub" tableHeader="Cub Scout Pack Info" rows={cubScoutData} />
-            </Grid>
-            <Grid item xs={12}>
+            </div>
+            <div>
                 <Datagrid type="boy" tableHeader="Boy Scouts Troop Info" rows={boyScoutData} />
-            </Grid>
-            <Grid item xs={12}>
+            </div>
+            <div>
                 <Datagrid type="sea" tableHeader="Sea Scout Info" rows={seaScoutData} />
-            </Grid>
-        </Grid>
+            </div>
+        </div>
     )
 }

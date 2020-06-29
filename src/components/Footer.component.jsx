@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles({
     root: {
@@ -17,9 +17,9 @@ export default function Footer() {
 
     return (
         <footer className={classes.root}>
-            <Grid container>
+            <Container>
                 &nbsp;
-            </Grid>
+            </Container>
         </footer>
     );
 }

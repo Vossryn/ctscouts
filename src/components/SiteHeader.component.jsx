@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Logo from '../assets/images/boy_scouts_of_america_logo.png';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
     root: {
@@ -44,26 +43,26 @@ export default function MainMenu() {
 
     return (
         <Container className={classes.root} maxWidth="md">
-            <Grid container spacing={0} className={classes.logocontainer}>
-                <Grid item>
+            <div className={classes.logocontainer}>
+                <div>
                     <img
                         src={Logo}
                         className={classes.bsalogo}
                         alt="boy_scouts_of_america_logo"
                     />
-                </Grid>
-                <Grid item>
+                </div>
+                <div>
                     <div className={classes.spacer}></div>
-                </Grid>
-                <Grid item className={classes.districtClassContainer}>
+                </div>
+                <div className={classes.districtClassContainer}>
                     <Typography variant="h5" className={classes.districtClass}>
                         Croatan Trails District&#44;
                     </Typography>
                     <Typography variant="h5" className={classes.districtClass}>
                         East Carolina Council
                     </Typography>
-                </Grid>
-            </Grid>
+                </div>
+            </div>
         </Container>
     );
 }
