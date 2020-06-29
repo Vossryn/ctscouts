@@ -1,7 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
@@ -9,12 +8,9 @@ import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 import BigCalendar from './BigCalendar.component';
 import DownloadNowBlock from '../../components/DownloadNowBlock.component';
 
+import './styles.scss';
+
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-        paddingTop: "20px",
-        paddingBottom: "20px"
-    },
     claendarContainer: {
         padding: "10px"
     },
@@ -28,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     },
     subheaderSmall:{
         fontFamily: "Marcellus",
-        fontSize: "22px",
+        fontSize: "21px",
         color: '#CE1126'
     },
     hrmargin: {
@@ -43,13 +39,8 @@ export default function CalendarPage() {
     const classes = useStyles();
 
     return (        
-        <Grid container spacing={2}>
-            <Grid item xs={9}>
-                <Paper elevation={2} className={classes.claendarContainer}>
-                    <BigCalendar />
-                </Paper>
-            </Grid>
-            <Grid item xs={3}>
+        <div className="grid-calendar-container">
+            <div className="grid-event-bar">
                 <Typography variant="h4" className={classes.bsah4}>
                     Monthly Events
                 </Typography>
@@ -165,10 +156,36 @@ export default function CalendarPage() {
                         </Link>
                     </li>
                 </ul>
-            </Grid>
-            <Grid item xs={3}>
+            </div>
+            <div className="grid-calendar">
+                <Paper elevation={2} className={classes.claendarContainer}>
+                    <BigCalendar />
+                </Paper>
+            </div>
+            <div className="grid-add-calendar">
+                <Typography variant="h4" className={classes.bsah4}>
+                    Add Our Calendar to Yours:
+                </Typography>
+                <hr className={classes.hrmargin}></hr>
+                <Typography variant="h5" className={classes.subheader}>
+                    District Eagle Boards:
+                </Typography>
+                <ul>
+                    <li>
+                        <Typography variant="body1">
+                            For Google Calendars, simply add "croatantrails@gmail.com"
+                        </Typography>
+                    </li>
+                    <li>
+                        <Typography variant="body2">
+                            If you need the ICAL, https://www.google.com/calendar/ical/croatantrails%40gmail.com/public/basic.ics
+                        </Typography>
+                    </li>
+                </ul>
+            </div>
+            <div className="grid-download-now">
                 <DownloadNowBlock />
-            </Grid>
-        </Grid>
+            </div>
+        </div>
     )
 }

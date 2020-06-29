@@ -2,19 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
+import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
 import Skeleton from '@material-ui/lab/Skeleton';
 
 import Card from './card.component';
 import DownloadNowBlock from '../../components/DownloadNowBlock.component';
 
+import './styles.grid.scss';
+
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-        paddingTop: "20px",
-        paddingBottom: "20px"
-    },
     bsah4: {
         fontFamily: "Marcellus",
         color: '#003f87'
@@ -56,34 +53,30 @@ export default function HomePage() {
     const classes = useStyles();
 
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
+        <div className="grid-home-container">
+            <div className="grid-header-image">
                 <Skeleton variant="rect" height={250}></Skeleton>
-            </Grid>
-            <Grid item xs={12}>
-                <Grid container spacing={2}>
-                    <Grid item xs={9}>
-                        <Typography variant="h4" className={classes.bsah4}>
-                            Welcome to Croatan Trails!
-                            </Typography>
-                        <hr className={classes.hrmargin} />
-                        <Typography variant="h6">
-                            Located along the Crystal Coast in eastern North Carolina, the Croatan Trails (CT) District is one of nine making up the East Carolina Council, and serves Carteret and east Craven Counties, and is home to Coree Chapter of the Order of the Arrow.
-                            </Typography>
-                        <Link
-                            variant="body2"
-                            href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
-                            Add me to CT District's e-mail list
-                            </Link>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <DownloadNowBlock />
-                    </Grid>
-                </Grid>
-            </Grid>
+            </div>
+            <div className="grid-body-1">
+                <Typography variant="h4" className={classes.bsah4}>
+                    Welcome to Croatan Trails!
+                        </Typography>
+                <hr className={classes.hrmargin} />
+                <Typography variant="h6">
+                    Located along the Crystal Coast in eastern North Carolina, the Croatan Trails (CT) District is one of nine making up the East Carolina Council, and serves Carteret and east Craven Counties, and is home to Coree Chapter of the Order of the Arrow.
+                        </Typography>
+                <Link
+                    variant="body2"
+                    href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
+                    Add me to CT District's e-mail list <OpenInNewSharpIcon fontSize="inherit" />
+                </Link>
+            </div>
+            <div className="grid-home-download-now">
+                <DownloadNowBlock />
+            </div>
             {(cards.map((dataItem, index) => {
                 return (
-                    <Grid item xs={4} key={index}>
+                    <div key={index} className={`grid-card-${index + 1}`}>
                         <Card
                             title={dataItem.title}
                             img={dataItem.img}
@@ -91,9 +84,9 @@ export default function HomePage() {
                             link={dataItem.link}
                             linkText={dataItem.linkText}
                         ></Card>
-                    </Grid>
+                    </div>
                 )
             }))}
-        </Grid>
+        </div>
     )
 }

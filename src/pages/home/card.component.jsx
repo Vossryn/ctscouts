@@ -5,6 +5,7 @@ import Link from '@material-ui/core/Link';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
 import Skeleton from '@material-ui/lab/Skeleton';
 
@@ -51,7 +52,7 @@ export default function CampingPage(props) {
                     variant="body2"
                     href={link}
                 >
-                    {linkText} 
+                    {linkText}  <OpenInNewSharpIcon fontSize="inherit" />
                 </Link>
             </CardContent>
         </Card>

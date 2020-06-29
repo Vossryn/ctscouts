@@ -9,6 +9,7 @@ import MainMenu from "./components/MainMenu.component"
 import Footer from "./components/Footer.component"
 
 import "./styles.scss";
+
 import 'fontsource-roboto';
 import 'fontsource-marcellus';
 

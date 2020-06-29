@@ -1,0 +1,149 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .grid-calendar-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }
+
+  .grid-event-bar {
+    grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+  }
+
+  .grid-calendar {
+    grid-area: 1 / 4 / 4 / 13;
+  }
+
+  .grid-add-calendar {
+    grid-area: 4 / 4 / 4 / 10;
+  }
+
+  .grid-download-now {
+    grid-area: 4 / 10 / 4 / 13;
+  }
+    
+}
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+  
+    .grid-calendar-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 15px;
+    }
+  
+    .grid-event-bar {
+      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
+    .grid-calendar {
+      grid-area: 1 / 4 / 4 / 13;
+    }
+  
+    .grid-add-calendar {
+      grid-area: 4 / 4 / 4 / 10;
+    }
+  
+    .grid-download-now {
+      grid-area: 4 / 10 / 4 / 13;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    .grid-calendar-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 15px;
+    }
+  
+    .grid-event-bar {
+      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
+    .grid-calendar {
+      grid-area: 1 / 4 / 4 / 13;
+    }
+  
+    .grid-add-calendar {
+      grid-area: 4 / 4 / 4 / 10;
+    }
+  
+    .grid-download-now {
+      grid-area: 4 / 10 / 4 / 13;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+    .grid-calendar-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 15px;
+    }
+  
+    .grid-event-bar {
+      grid-area: 1 / 1 / 6 / 4; //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    }
+  
+    .grid-calendar {
+      grid-area: 1 / 4 / 4 / 13;
+    }
+  
+    .grid-add-calendar {
+      grid-area: 4 / 4 / 4 / 10;
+    }
+  
+    .grid-download-now {
+      grid-area: 4 / 10 / 4 / 13;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    //CSS
+    
+  }
