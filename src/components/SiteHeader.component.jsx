@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // import { Link as RouterLink } from 'react-router-dom';
 
-import Logo from '../../assets/images/boy_scouts_of_america_logo.png';
+import Logo from '../assets/images/boy_scouts_of_america_logo.png';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 

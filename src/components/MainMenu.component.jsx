@@ -13,7 +13,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 // import MenuIcon from '@material-ui/icons/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 
-import SiteHeader from './SiteHeader/SiteHeader.component'
+import SiteHeader from './SiteHeader.component'
 
 const useStyles = makeStyles({
     root: {
