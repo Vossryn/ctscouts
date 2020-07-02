@@ -124,8 +124,33 @@ export default function CampingPage() {
                     </ul>
                 </Typography>
             </div>
-            <div>
-                
+            <div className="grid-camping-daycamp">
+                <Typography variant="h4" className={classes.bsah4}>
+                    Cub Scout Summer Day Camp
+                </Typography>
+                <hr className={classes.hrmargin}></hr>
+                <Typography variant="body1">
+                    Registration opens each spring for Cub Scout Day Camp. 
+                    This is a great opportunity for Cubs to work on rank advancement, 
+                    earn Adventure Loops, fine-tune your BB-gun shooting and bow/arrow 
+                    skills, while learning how to be safe and have lots of fun outdoors. 
+                    This is not an overnight camp, so parents drop off (8:30am) and pick 
+                    up (3:00pm) each day. Your son might even take a little Sam Hatcher 
+                    dirt home at the end of each day.
+                </Typography>
+            </div>
+            <div className="grid-camping-ooa">
+                <Typography variant="h4" className={classes.bsah4}>
+                    Coree Chapter Order of the Arrow
+                </Typography>
+                <hr className={classes.hrmargin}></hr>
+                <Typography variant="body1">
+                    In addition to the adventures each month, Troop 12345 
+                    plans a High Adventure trip each summer. Each 4 years, 
+                    the troop traditionally goes to one of the Boy Scouts of 
+                    America High Adventure Bases such as the Philmont Scout 
+                    Ranch in New Mexico.
+                </Typography>
             </div>
         </div>
     )

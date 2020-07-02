@@ -5,13 +5,14 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-// import Slide from "@material-ui/core/Slide";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-// import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
 import { Link as RouterLink } from 'react-router-dom';
+
+import HomeIcon from '@material-ui/icons/Home';
+import EventIcon from '@material-ui/icons/Event';
+import SearchIcon from '@material-ui/icons/Search';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 import SiteHeader from './SiteHeader.component'
 
@@ -36,11 +37,11 @@ const useStyles = makeStyles({
 });
 
 const menuItems = [
-    { label: "Home", link: "/" },
-    { label: "Calendar", link: "/calendar" },
-    { label: "Find a Unit", link: "/find_a_unit" },
-    { label: "Camping", link: "/camping" },
-    { label: "Resources", link: "/resources" }
+    { label: "Home", link: "/", icon: <HomeIcon />},
+    { label: "Calendar", link: "/calendar", icon: <EventIcon /> },
+    { label: "Find a Unit", link: "/find_a_unit", icon: <SearchIcon /> },
+    { label: "Camping", link: "/camping", icon: <NightsStayIcon /> },
+    { label: "Resources", link: "/resources", icon: <MenuBookIcon /> }
 ]
 
 let currentSite = 0 ;
@@ -88,6 +89,7 @@ export default function MainMenu(props) {
                         {
                             menuItems.map((item, index) => (
                                 <Tab
+                                    icon={item.icon}
                                     label={item.label}
                                     component={RouterLink}
                                     to={item.link}

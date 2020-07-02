@@ -19,7 +19,7 @@ import "./styles.grid.scss";
 
 const useStyles = makeStyles({
     root: {
-        paddingTop: "123px",
+        paddingTop: "147px",
         paddingBottom: "40px",
         marginBottom: "-10px",
         minHeight: "calc(100vh - 30px)"

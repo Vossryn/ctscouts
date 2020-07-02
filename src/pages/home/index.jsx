@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     },
     hrmargin: {
         marginTop: "0px"
+    },
+    icons: {
+        marginBottom: "-2px"
     }
 }));
 
@@ -68,7 +71,7 @@ export default function HomePage() {
                 <Link
                     variant="body2"
                     href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
-                    Add me to CT District's e-mail list <OpenInNewSharpIcon fontSize="inherit" />
+                    Add me to CT District's e-mail list <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                 </Link>
             </div>
             <div className="grid-home-download-now">

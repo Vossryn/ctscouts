@@ -25,7 +25,15 @@
   }
 
   .grid-camping-ammenities {
-    grid-area: 3 / 1 / 4 / 7;
+    grid-area: 3 / 1 / 5 / 7;
+  }
+
+  .grid-camping-daycamp {
+    grid-area: 3 / 7 / 4 / 13;
+  }
+
+  .grid-camping-ooa {
+    grid-area: 4 / 7 / 4 / 13;
   }
     
 }

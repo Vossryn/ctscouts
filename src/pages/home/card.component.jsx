@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     },
     content: {
         height: "300px"
+    },
+    icons: {
+        marginBottom: "-2px"
     }
 }));
 
@@ -52,7 +55,7 @@ export default function CampingPage(props) {
                     variant="body2"
                     href={link}
                 >
-                    {linkText}  <OpenInNewSharpIcon fontSize="inherit" />
+                    {linkText}  <OpenInNewSharpIcon fontSize="inherit" className={classes.icons}/>
                 </Link>
             </CardContent>
         </Card>
