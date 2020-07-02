@@ -18,11 +18,11 @@ import SiteHeader from './SiteHeader.component'
 
 const useStyles = makeStyles({
     root: {
-        flexGrow: 1,
         borderRadius: "0px"
     },
     toolbar: {
-        minHeight: "inherit"
+        minHeight: "inherit",
+        zIndex: "100"
     },
     hidden: {
         height: "0px",
@@ -69,37 +69,36 @@ export default function MainMenu(props) {
     };
 
     return (
-        <div className={classes.root}>
-            <AppBar
-                position="fixed"
-                color="inherit"
-            >
+        <AppBar
+            position="fixed"
+            color="inherit"
+            className={classes.root}
+        >
+
+            <Paper className={classes.root}>
                 <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
                     <SiteHeader />
                 </Toolbar>
-
-                <Paper className={classes.root}>
-                    <Tabs
-                        value={tabsvalue}
-                        onChange={handleChange}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        centered
-                    >
-                        {
-                            menuItems.map((item, index) => (
-                                <Tab
-                                    icon={item.icon}
-                                    label={item.label}
-                                    component={RouterLink}
-                                    to={item.link}
-                                    key={index}
-                                />
-                            ))
-                        }
-                    </Tabs>
-                </Paper>
-            </AppBar>
-        </div>
+                <Tabs
+                    value={tabsvalue}
+                    onChange={handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    centered
+                >
+                    {
+                        menuItems.map((item, index) => (
+                            <Tab
+                                icon={item.icon}
+                                label={item.label}
+                                component={RouterLink}
+                                to={item.link}
+                                key={index}
+                            />
+                        ))
+                    }
+                </Tabs>
+            </Paper>
+        </AppBar>
     );
 }
