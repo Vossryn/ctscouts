@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import PictureAsPdfOutlinedIcon from '@material-ui/icons/PictureAsPdfOutlined';
 
 
 const useStyles = makeStyles(theme => ({
@@ -51,50 +52,98 @@ export default function CampingPage(props) {
             </Typography>
             <ul className={classes.resourcelist}>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.scouting.org/"
+                        title="Boy Scouts of America"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Boy Scouts of America
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://councilspd.scouting.org/sitecore/content/council426.aspx"
+                        title="East Carolina Council"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         East Carolina Council
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.oa-bsa.org/"
+                        title="Order of the Arrow National Site"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Order of the Arrow National Site
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.campbonner.org/"
+                        title="Camp Boddie Scout Reservation"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Camp Boddie Scout Reservation
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.pamlicoseabase.org/"
+                        title="Pamlico Sea Base"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Pamlico Sea Base
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.boyscouttrail.com/"
+                        title="Boy Scout Trail"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Boy Scout Trail
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.eccbsa.org/Newsletter"
+                        title="Tarheel Scouter"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Tarheel Scouter
                     </Link>
                 </li>
                 <li className={classes.resourceitem}>
-                    <Link>
-                    <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
+                    <Link
+                        variant="body2"
+                        target="_blank"
+                        rel="noopener"
+                        href="http://scout-wire.org/"
+                        title="Scout Wire"
+                    >
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons}/>
                         Scout Wire
                     </Link>
                 </li>
@@ -107,7 +156,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf">
+                        href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf"
+                        title="2020 ITOLS"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2020 ITOLS
                     </Link>
@@ -115,7 +166,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf">
+                        href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf"
+                        title="LNT Trainer Course"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         LNT Trainer Course
                     </Link>
@@ -123,7 +176,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/calendar_CTD_2020.pdf">
+                        href="downloads/pdf/calendar_CTD_2020.pdf"
+                        title="2020 District Calendar"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2020 District Calendar
                     </Link>
@@ -131,7 +186,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf">
+                        href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf"
+                        title="2019 Merit Badge Counselors"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2019 Merit Badge Counselors
                     </Link>
@@ -139,7 +196,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/calendar_CTD_2019.pdf">
+                        href="downloads/pdf/calendar_CTD_2019.pdf"
+                        title="2019 District Calendar"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2019 District Calendar
                     </Link>
@@ -147,7 +206,9 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/524-406A.pdf">
+                        href="downloads/pdf/524-406A.pdf"
+                        title="BSA Application (English)"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         BSA Application (English)
                     </Link>
@@ -155,9 +216,31 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/524-423.pdf">
+                        href="downloads/pdf/524-423.pdf"
+                        title="BSA Application (Spanish)"
+                    >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         BSA Application (Spanish)
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
+                        href="https://filestore.scouting.org/filestore/pdf/512-927_fillable.pdf"
+                        title="Eagle Scout Project Workbook"
+                    >
+                        <PictureAsPdfOutlinedIcon fontSize="small" className={classes.icons} />
+                        Eagle Scout Project Workbook
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
+                        href="https://filestore.scouting.org/filestore/pdf/512-927_fillable.pdf"
+                        title="Eagle Scout Application"
+                    >
+                        <PictureAsPdfOutlinedIcon fontSize="small" className={classes.icons} />
+                        Eagle Scout Application
                     </Link>
                 </li>
             </ul>

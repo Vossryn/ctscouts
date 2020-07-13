@@ -74,7 +74,7 @@ export default function CampingPage() {
                     or visit our website to get information specific to our District.
                 </Typography>
             </div>
-            <Resourcelinks className="grid-resources-donwloads" />
+            <Resourcelinks className="grid-resources-downloads" />
             <div className="grid-resources-expansion-panels-1">
                 <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleExpand('panel1')}>
                     <ExpansionPanelSummary
@@ -103,7 +103,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/CubScouts.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/CubScouts.aspx"
+                                            title="Everything Cub Scouts need to know"
+                                        >
                                             Everything Cub Scouts need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -113,7 +115,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/Parents.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/Parents.aspx"
+                                            title="Everything parents need to know"
+                                        >
                                             Everything parents need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -123,7 +127,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/Leaders/DenLeaderResources.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/Leaders/DenLeaderResources.aspx"
+                                            title="Everything Den Leaders need to know"
+                                        >
                                             Everything Den Leaders need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -133,7 +139,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/Leaders/CubmasterResources.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/Leaders/CubmasterResources.aspx"
+                                            title="Everything Cubmasters need to know"
+                                        >
                                             Everything Cubmasters need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -143,7 +151,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/Leaders/PackCommitteeResources.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/Leaders/PackCommitteeResources.aspx"
+                                            title="What is a Pack Committee?"
+                                        >
                                             What is a Pack Committee?
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -153,7 +163,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/FAQS.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/FAQS.aspx"
+                                            title="Frequently Asked Questions"
+                                        >
                                             Frequently Asked Questions
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -163,7 +175,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/HealthandSafety/Guidelines_Policies.aspx">
+                                            href="http://www.scouting.org/Home/HealthandSafety/Guidelines_Policies.aspx"
+                                            title="Guidelines &amp; Policies"
+                                        >
                                             Guidelines &amp; Policies
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -173,7 +187,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/CubScouts/Leaders.aspx">
+                                            href="http://www.scouting.org/Home/CubScouts/Leaders.aspx"
+                                            title="and more. . ."
+                                        >
                                             and more. . .
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -198,7 +214,9 @@ export default function CampingPage() {
                                         variant="body2"
                                         target="_blank"
                                         rel="noopener"
-                                        href="https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en">
+                                        href="https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en"
+                                        title="get directions"
+                                    >
                                         get directions
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                     </Link>
@@ -237,7 +255,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/scoutsource/BoyScouts.aspx">
+                                            href="http://www.scouting.org/scoutsource/BoyScouts.aspx"
+                                            title="Everything Boy Scouts need to know"
+                                        >
                                             Everything Boy Scouts need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -247,7 +267,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/scoutsource/BoyScouts/Adults.aspx">
+                                            href="http://www.scouting.org/scoutsource/BoyScouts/Adults.aspx"
+                                            title="Everything Adult Leaders &amp; Parents need to know"
+                                        >
                                             Everything Adult Leaders &amp; Parents need to know
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -257,7 +279,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards.aspx">
+                                            href="http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards.aspx"
+                                            title="Advancement and Awards"
+                                        >
                                             Advancement and Awards
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -267,7 +291,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/scoutsource/BoyScouts/GuideforMeritBadgeCounselors.aspx">
+                                            href="http://www.scouting.org/scoutsource/BoyScouts/GuideforMeritBadgeCounselors.aspx"
+                                            title="Merit Badge Counselors"
+                                        >
                                             Merit Badge Counselors
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -277,7 +303,9 @@ export default function CampingPage() {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://www.scouting.org/Home/HealthandSafety/Guidelines_Policies.aspx">
+                                            href="http://www.scouting.org/Home/HealthandSafety/Guidelines_Policies.aspx"
+                                            title="Guidelines &amp; Policies"
+                                        >
                                             Guidelines &amp; Policies
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                         </Link>
@@ -302,7 +330,9 @@ export default function CampingPage() {
                                         variant="body2"
                                         target="_blank"
                                         rel="noopener"
-                                        href="https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en">
+                                        href="https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en"
+                                        title="get directions"
+                                    >
                                         get directions
                                             <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                                     </Link>
@@ -379,7 +409,18 @@ export default function CampingPage() {
                                         <div>
                                             <div>
                                                 <Typography variant="body1">
-                                                    Note: (r) required, (e) e-Course/online, (i) classroom-practical training
+                                                    Note: (r) required, 
+                                                    &nbsp;<Link
+                                                        variant="body2"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        href="https://my.scouting.org/"
+                                                        title="(e) e-Course/Online"
+                                                    >
+                                                        (e) e-Course/Online 
+                                                        <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                    </Link>,&nbsp;
+                                                    (i) classroom-practical training
                                                 </Typography>
                                             </div>
                                             <div>
@@ -418,7 +459,16 @@ export default function CampingPage() {
                                                         required if you plan to take your Pack or Webelos Den camping
                                                     </li>
                                                     <li>
-                                                        Find out more about adult training
+                                                        <Link
+                                                            variant="body2"
+                                                            target="_blank"
+                                                            rel="noopener"
+                                                            href="http://www.scouting.org/Training/Adult.aspx"
+                                                            title="Find out more about adult training"
+                                                        >
+                                                            Find out more about adult training
+                                                            <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -439,7 +489,18 @@ export default function CampingPage() {
                                         <div>
                                             <div>
                                                 <Typography variant="body1">
-                                                    Note: (r) required, (e) e-Course/online, (i) classroom-practical training
+                                                    Note: (r) required, &nbsp;
+                                                    <Link
+                                                        variant="body2"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        href="https://my.scouting.org/"
+                                                        title="(e) e-Course/Online"
+                                                    >
+                                                        (e) e-Course/Online
+                                                        <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                    </Link>,&nbsp;
+                                                    (i) classroom-practical training
                                                 </Typography>
                                             </div>
                                             <div>
@@ -482,7 +543,16 @@ export default function CampingPage() {
                                                         Trek Safely (e)
                                                     </li>
                                                     <li>
-                                                        Find out more about adult training
+                                                        <Link
+                                                            variant="body2"
+                                                            target="_blank"
+                                                            rel="noopener"
+                                                            href="http://www.scouting.org/Training/Adult.aspx"
+                                                            title="Find out more about adult training"
+                                                        >
+                                                            Find out more about adult training
+                                                            <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -503,7 +573,18 @@ export default function CampingPage() {
                                         <div>
                                             <div>
                                                 <Typography variant="body1">
-                                                    Note: (r) required, (e) e-Course/online, (i) classroom-practical training
+                                                    Note: (r) required, &nbsp;
+                                                    <Link
+                                                        variant="body2"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        href="https://my.scouting.org/"
+                                                        title="(e) e-Course/Online"
+                                                    >
+                                                        (e) e-Course/Online
+                                                        <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                    </Link>,&nbsp;
+                                                    (i) classroom-practical training
                                                 </Typography>
                                             </div>
                                             <div>
@@ -524,7 +605,16 @@ export default function CampingPage() {
                                                         The Trainers EDGE(i)
                                                     </li>
                                                     <li>
-                                                        Find out more about adult training
+                                                        <Link
+                                                            variant="body2"
+                                                            target="_blank"
+                                                            rel="noopener"
+                                                            href="http://www.scouting.org/Training/Adult.aspx"
+                                                            title="Find out more about adult training"
+                                                        >
+                                                            Find out more about adult training
+                                                            <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -565,18 +655,20 @@ export default function CampingPage() {
                                                 target="_blank"
                                                 rel="noopener"
                                                 href="https://www.google.com/maps/place/Boy+Scouts+of+America/@35.285897,-77.584591,17z/data=!3m1!4b1!4m2!3m1!1s0x89aeb5478b984359:0x2a6dde660761eb06?hl=en"
+                                                title="get directions"    
                                             >
                                                 get directions
                                             </Link>
                                             )
                                         </li>
                                     <li>
-                                        Scout Shop (Ace Hardware in Emerald Isle - 
+                                        Scout Shop - Ace Hardware in Emerald Isle ( 
                                             <Link
                                                 variant="body1"
                                                 target="_blank"
                                                 rel="noopener"
                                                 href="https://www.google.com/maps/place/300+Emerald+Plantation+Rd,+Emerald+Isle,+NC+28594/@34.6622747,-77.0486642,18z/data=!3m1!4b1!4m2!3m1!1s0x89a8fafb17051189:0x12d14e2a5ddb6cd?hl=en"
+                                                title="get directions"    
                                             >
                                                 get directions
                                             </Link>
@@ -587,9 +679,10 @@ export default function CampingPage() {
                                             variant="body1"
                                             target="_blank"
                                             rel="noopener"
-                                            href="http://scoutstuff.org/"
+                                            href="https://www.scoutshop.org/"
+                                            title="ScoutShop.org"
                                         >
-                                            ScoutStuff.org
+                                            ScoutShop.org
                                         </Link>
                                     </li>
                                 </ul>
@@ -707,7 +800,17 @@ export default function CampingPage() {
                                     </li>
                                     <li>
                                         <span className={classes.boldSpan}>Where:</span> 
-                                        Camp Sam Hatcher, Sam Hatcher Rd., Newport, NC (get directions)
+                                        Camp Sam Hatcher, Sam Hatcher Rd., Newport, NC (
+                                            <Link
+                                                variant="body1"
+                                                target="_blank"
+                                                rel="noopener"
+                                                href="https://www.google.com/maps/dir//34.7425667,-76.9125404/@34.7388732,-76.9151134,3017m/data=!3m1!1e3?hl=en"
+                                                title="get directions"    
+                                            >
+                                                get directions
+                                            </Link>
+                                       )
                                     </li>
                                 </ul>                                
                             </div>
@@ -751,15 +854,27 @@ export default function CampingPage() {
                                     </li>
                                     <li>
                                         Where: Camp Sam Hatcher, Sam Hatcher Rd., Newport, NC (
-                                        <Link>
-                                            get directions
-                                        </Link>
+                                            <Link
+                                                variant="body1"
+                                                target="_blank"
+                                                rel="noopener"
+                                                href="https://www.google.com/maps/dir//34.7425667,-76.9125404/@34.7388732,-76.9151134,3017m/data=!3m1!1e3?hl=en"
+                                                title="get directions"    
+                                            >
+                                                get directions
+                                            </Link>
                                         )
                                     </li>
                                     <li>
-                                        <Link>
-                                            more information
-                                        </Link>
+                                            <Link
+                                                variant="body1"
+                                                target="_blank"
+                                                rel="noopener"
+                                                href="http://croatan.org/"
+                                                title="more information"    
+                                            >
+                                                more information
+                                            </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -790,7 +905,13 @@ export default function CampingPage() {
                                     and pay salaries to a very few number of professional Scouters 
                                     who manage the program. Without the support of Friends of Scouting, 
                                     our program would not be what it is today. Thanks for your support! 
-                                    <Link>
+                                    <Link
+                                        variant="body1"
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="http://www.eccbsa.org/Support%20Us/Friends%20of%20Scouting"
+                                        title="Want to find out more?"
+                                    >
                                         Want to find out more?
                                     </Link>
                                 </Typography>
@@ -820,7 +941,13 @@ export default function CampingPage() {
                                     with disabilities, although those exist and may be beneficial in some cases. 
                                     The severity of disability will indicate how members should be registered. 
                                     See “
-                                    <Link>
+                                    <Link
+                                        variant="body1"
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="http://www.scouting.org/Home/GuideToAdvancement/SpecialNeeds/RegisterQualifiedMembers.aspx"
+                                        title="Registering Qualified Members Beyond Age of Eligibility"
+                                    >
                                         Registering Qualified Members Beyond Age of Eligibility,
                                     </Link>
                                     ” 10.1.0.0.
@@ -831,7 +958,13 @@ export default function CampingPage() {
                                     enthusiastic about helping those with special needs, they should also 
                                     recognize the demands that will be placed on their patience, understanding, 
                                     and skill in working on advancement. 
-                                    <Link>
+                                    <Link
+                                        variant="body1"
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="http://www.scouting.org/filestore/pdf/510-071.pdf"
+                                        title="Scouting for those with special needs"
+                                    >
                                         Scouting for those with special needs.
                                     </Link>
                                 </Typography>
@@ -919,7 +1052,13 @@ export default function CampingPage() {
                                 </Typography>
                                 <ul>
                                     <li>
-                                        <Link>
+                                        <Link
+                                            variant="body1"
+                                            target="_blank"
+                                            rel="noopener"
+                                            href="http://www.scouting.org/filestore/HealthSafety/pdf/2013Guidelines_Managing_Food_Allergies.pdf"
+                                            title="Guidelines for Managing Food Allergies"
+                                        >
                                             Guidelines for Managing Food Allergies.
                                         </Link>
                                     </li>
