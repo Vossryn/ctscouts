@@ -70,7 +70,11 @@ export default function HomePage() {
                         </Typography>
                 <Link
                     variant="body2"
-                    href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}>
+                    href={'http://visitor.constantcontact.com/manage/optin/ea?v=001K_4EBhhTrxTn9sfJiqjEP7SfWG_iYNyw1GljlONRt6qyOCAVm2L-vKZYxmuEoVQFs2gnUOQSAOUX3E7nKY7ozg%3D%3D'}
+                    target="_blank"
+                    rel="noopener"
+                    title="Add me to CT District's e-mail list"
+                >
                     Add me to CT District's e-mail list <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                 </Link>
             </div>

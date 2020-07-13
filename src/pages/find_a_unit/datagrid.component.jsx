@@ -99,7 +99,14 @@ export default function Datagrid(props) {
                         <TableCell colSpan={7} align="center">
                             <Typography>
                                 To report changes or updates please contact&nbsp;
-                                <Link href="Acts2@ec.rr.com">Brian Snow</Link>
+                                <Link 
+                                    href="Acts2@ec.rr.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    title="Acts2@ec.rr.com <Brian Snow>"
+                                >
+                                    Brian Snow
+                                </Link>
                             </Typography>
                         </TableCell>
                     </TableRow>

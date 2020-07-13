@@ -54,6 +54,9 @@ export default function CampingPage(props) {
                 <Link
                     variant="body2"
                     href={link}
+                    target="_blank"
+                    rel="noopener"
+                    title={linkText}
                 >
                     {linkText}  <OpenInNewSharpIcon fontSize="inherit" className={classes.icons}/>
                 </Link>

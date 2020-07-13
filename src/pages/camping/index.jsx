@@ -51,7 +51,11 @@ export default function CampingPage() {
                 <Typography variant="body1">
                     <Link
                         variant="body2"
-                        href="https://www.google.com/maps/dir//34.7425667,-76.9125404/@34.7388732,-76.9151134,3017m/data=!3m1!1e3?hl=en">
+                        href="https://www.google.com/maps/dir//34.7425667,-76.9125404/@34.7388732,-76.9151134,3017m/data=!3m1!1e3?hl=en"
+                        target="_blank"
+                        rel="noopener"
+                        title="Get directions - Located in Newport, North Carolina"  
+                    >
                         <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                         Located in Newport, North Carolina
                     </Link>,

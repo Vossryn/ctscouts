@@ -107,6 +107,7 @@ export default function CalendarPage() {
                             target="_blank"
                             rel="noopener"
                             href={"https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en"}
+                            title="Get Directions - The Church of Jesus Christ of Latter-day Saints, 3606 Country Club Rd, Morehead City, NC"
                         >
                             Get Directions <OpenInNewSharpIcon fontSize="inherit" />
                         </Link>
@@ -144,6 +145,7 @@ export default function CalendarPage() {
                             target="_blank"
                             rel="noopener"
                             href={"https://www.google.com/maps/dir//34.7425667,-76.9125404/@34.7388732,-76.9151134,3017m/data=!3m1!1e3?hl=en"}
+                            title="Get Directions - Camp Sam Hatcher, Sam Hatcher Rd., Newport, NC"
                         >
                             Get Directions <OpenInNewSharpIcon fontSize="inherit" />
                         </Link>
@@ -169,6 +171,7 @@ export default function CalendarPage() {
                             target="_blank"
                             rel="noopener"
                             href={"https://www.google.com/maps/place/167+Howard+Blvd,+Newport,+NC+28570/@34.786593,-76.862131,725m/data=!3m2!1e3!4b1!4m2!3m1!1s0x89a8eb0d136e5501:0xe28313b8cbb7a1cb!6m1!1e1?hl=en"}
+                            title="Get Directions - Scout Hut at 167 Howard Blvd, Newport, NC"
                         >
                             Get Directions <OpenInNewSharpIcon fontSize="inherit" />
                         </Link>

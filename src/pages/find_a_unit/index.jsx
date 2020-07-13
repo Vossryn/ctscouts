@@ -80,8 +80,13 @@ export default function FindaunitPage() {
                     <li>
                         <Typography>
                             Use&nbsp;
-                                    <Link href="https://beascout.scouting.org/">
-                                BSA's website
+                                    <Link 
+                                        href="https://beascout.scouting.org/"
+                                        target="_blank"
+                                        rel="noopener"
+                                        title="BSA's website"
+                                    >
+                                        BSA's website
                                     </Link>
                                     &nbsp;to guide you through the process.
                             </Typography>
