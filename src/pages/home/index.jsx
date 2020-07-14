@@ -4,12 +4,15 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
-import Skeleton from '@material-ui/lab/Skeleton';
-
 import Card from './card.component';
 import DownloadNowBlock from '../../components/DownloadNowBlock.component';
 
 import './styles.grid.scss';
+
+import SiteBanner from '../../assets/images/site_banner.png';
+import BSALogo from '../../assets/images/BSALogo.jpg';
+import CubScoutsLogo from '../../assets/images/CubScoutsLogo.jpg';
+import ScoutsBSALogo from '../../assets/images/ScoutsBSALogo.jpg';
 
 const useStyles = makeStyles(theme => ({
     bsah4: {
@@ -25,27 +28,30 @@ const useStyles = makeStyles(theme => ({
     },
     icons: {
         marginBottom: "-2px"
+    },
+    site_banner: {
+        height: "250px"
     }
 }));
 
 const cards = [
     {
         title: 'Cub Scouts',
-        img: '',
+        img: CubScoutsLogo,
         content: 'Cub Scouting is a year-round program whose mission is to develop character and ethical decision-making skills for youth in kindergarten through fifth grades (5 to 10 years old).',
         link: 'https://beascout.scouting.org',
         linkText: 'Sign up today!'
     },
     {
         title: 'Boy Scouts',
-        img: '',
+        img: BSALogo,
         content: 'Boy Scouting, is a year-round program for youth 11–17 designed to build character, citizenship, and personal fitness through a vigorous outdoor program and peer group leadership with the counsel of an adult Scoutmaster.',
         link: 'https://beascout.scouting.org',
         linkText: 'Sign up today!'
     },
     {
         title: 'Adult Leaders',
-        img: '',
+        img: ScoutsBSALogo,
         content: 'Behind every trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean and reverent Scout is a long line of committed volunteers who share those same traits. Volunteering has always been the very bedrock of the Scouting program. Watching kids grow is one thing — leading them through the process is a whole new experience all together.',
         link: 'https://beascout.scouting.org/Volunteer.aspx',
         linkText: 'Become a Leader!'
@@ -58,7 +64,9 @@ export default function HomePage() {
     return (
         <div className="grid-home-container">
             <div className="grid-home-header-image">
-                <Skeleton variant="rect" height={250}></Skeleton>
+                <img className={classes.site_banner}
+                    src={SiteBanner}
+                    alt=""/>
             </div>
             <div className="grid-body-1">
                 <Typography variant="h4" className={classes.bsah4}>

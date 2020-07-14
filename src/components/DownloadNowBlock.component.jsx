@@ -60,7 +60,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf">
+                                href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="2020 ITOLS"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 2020 ITOLS
                             </Link>
@@ -68,7 +72,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf">
+                                href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="LNT Trainer Course"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 LNT Trainer Course
                             </Link>
@@ -76,7 +84,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/calendar_CTD_2020.pdf">
+                                href="downloads/pdf/calendar_CTD_2020.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="2020 District Calendar"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 2020 District Calendar
                             </Link>
@@ -84,7 +96,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf">
+                                href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="2019 Merit Badge Counselors"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 2019 Merit Badge Counselors
                             </Link>
@@ -92,7 +108,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/calendar_CTD_2019.pdf">
+                                href="downloads/pdf/calendar_CTD_2019.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="2019 District Calendar"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 2019 District Calendar
                             </Link>
@@ -100,7 +120,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/524-406A.pdf">
+                                href="downloads/pdf/524-406A.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="BSA Application (English)"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 BSA Application (English)
                             </Link>
@@ -108,7 +132,11 @@ export default function Footer(props) {
                         <li className={classes.downloadnowitem}>
                             <Link
                                 variant="body2"
-                                href="downloads/pdf/524-423.pdf">
+                                href="downloads/pdf/524-423.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                title="BSA Application (Spanish)"
+                            >
                                 <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                                 BSA Application (Spanish)
                             </Link>
@@ -130,7 +158,9 @@ export default function Footer(props) {
                                 variant="body2"
                                 target="_blank"
                                 rel="noopener"
-                                href="https://www.tentaroo.com/ecc/">
+                                href="https://www.tentaroo.com/ecc/"
+                                title="Register for an event online"
+                            >
                                 <OpenInNewSharpIcon fontSize="small" className={classes.icons} />
                                 Register for an event online
                             </Link>
@@ -155,7 +185,9 @@ export default function Footer(props) {
                                             variant="body2"
                                             target="_blank"
                                             rel="noopener"
-                                            href={item.link}>
+                                            href={item.link}
+                                            title={item.text}
+                                        >
                                             {(item.iconType === "OpenInNewSharpIcon") ? <OpenInNewSharpIcon fontSize="small" className={classes.icons} /> : null}
                                             {(item.iconType === "PictureAsPdfIcon") ? <PictureAsPdfIcon fontSize="small" className={classes.icons} /> : null}
                                             {item.text}

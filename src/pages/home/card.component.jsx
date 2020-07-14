@@ -7,8 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
-import Skeleton from '@material-ui/lab/Skeleton';
-
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
@@ -25,6 +23,13 @@ const useStyles = makeStyles(theme => ({
     },
     icons: {
         marginBottom: "-2px"
+    },
+    imageContainer: {
+        textAlign: "center",
+        paddingTop: "20px"
+    },
+    image: {
+        height: "150px"
     }
 }));
 
@@ -34,9 +39,11 @@ export default function CampingPage(props) {
 
     return (
         <Card className={classes.root} variant="outlined">
-            <CardMedia>
-                {img}
-                <Skeleton variant="rect" height={150}/>
+            <CardMedia className={classes.imageContainer}>
+                <img className={classes.image}
+                 src={img}
+                 alt="">
+                </img>
             </CardMedia>
             <CardContent className={classes.content}>
                 <Typography 
