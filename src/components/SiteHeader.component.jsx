@@ -5,16 +5,6 @@ import Logo from '../assets/images/boy_scouts_of_america_logo.png';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
-    root: {
-        width: "100%",
-        height: "75px",
-        textAlign: "center",
-        backgroundColor: "white"
-    },
-    logocontainer: {
-        width: "485px",
-        margin: "0px auto"
-    },
     bsalogo: {
         height: "75px",
         marginTop: "4px",
@@ -42,7 +32,7 @@ export default function MainMenu() {
     const classes = useStyles();
 
     return (
-        <div className={classes.logocontainer}>
+        <div>
             <img
                 src={Logo}
                 className={classes.bsalogo}

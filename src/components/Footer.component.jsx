@@ -1,14 +1,40 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
 const useStyles = makeStyles({
     root: {
-        flexGrow: 1,
         width: '100%',
         height: '40px',
         backgroundColor: '#003f87',
         color: "#ffffff"
+    },
+    container: {
+        widht: "100%",
+        height: "100%",
+        position: "relative"
+    },
+    copyright: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        padding: "10px"
+    },
+    webmaster: {
+        position: "absolute",
+        color: "#FFFFFF",
+        top: "0",
+        right: "0",
+        padding: "10px"
+    },
+    ecclink: {
+        color: "#FFFFFF"
+    },  
+    icons: {
+        marginBottom: "-5px",
+        marginRight: "10px"
     }
 });
 
@@ -17,9 +43,27 @@ export default function Footer() {
 
     return (
         <footer className={classes.root}>
-            <Container>
-                &nbsp;
-            </Container>
+            <div className={classes.container}>
+                <Typography variant="body2" className={classes.copyright}>
+                    &copy; 2019 Croatan Trails District | 
+                    <Link
+                        target="_blank"
+                        rel="noopener"
+                        href="http://www.eccbsa.org/"
+                        title="East Carolina Council"
+                        className={classes.ecclink}
+                    >
+                        &nbsp;East Carolina Council
+                        <OpenInNewSharpIcon fontSize="small" className={classes.icons} />
+                    </Link>
+                </Typography>
+                <Link 
+                    variant="body2"
+                    href="mailto:vossryn+coratantrailswebmaster@gmail.com"
+                    className={classes.webmaster}>
+                    Webmaster: Britton Flynt
+                </Link>
+            </div>
         </footer>
     );
 }

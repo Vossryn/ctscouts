@@ -33,6 +33,9 @@ const useStyles = makeStyles({
         height: "75px",
         transition: "height 0.2s linear",
         overflow: "hidden"
+    },
+    logocontainer: {
+        margin: "0px auto"
     }
 });
 
@@ -77,7 +80,9 @@ export default function MainMenu(props) {
 
             <Paper className={classes.root}>
                 <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
-                    <SiteHeader />
+                    <RouterLink to="/" className={classes.logocontainer}>
+                        <SiteHeader />
+                    </RouterLink>
                 </Toolbar>
                 <Tabs
                     value={tabsvalue}
