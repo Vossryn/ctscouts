@@ -71,6 +71,10 @@ export default function MainMenu(props) {
         setTabsvalue(newValue);
     };
 
+    const handleChangeImgLink = (event) => {
+        setTabsvalue(0);
+    };
+
     return (
         <AppBar
             position="fixed"
@@ -80,7 +84,7 @@ export default function MainMenu(props) {
 
             <Paper className={classes.root}>
                 <Toolbar className={[trigger ? classes.hidden : classes.shown, classes.toolbar].join(' ')}>
-                    <RouterLink to="/" className={classes.logocontainer}>
+                    <RouterLink to="/" className={classes.logocontainer} onClick={handleChangeImgLink}>
                         <SiteHeader />
                     </RouterLink>
                 </Toolbar>
