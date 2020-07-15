@@ -3,18 +3,18 @@
   "name": "Croatan Trails Boy Scouts of America",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "Universal_Emblem_tiny.gif",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/gif"
     },
     {
-      "src": "Universal_Emblem_tiny.png",
-      "type": "image/png",
+      "src": "Universal_Emblem_tiny.gif",
+      "type": "image/gif",
       "sizes": "192x192"
     },
     {
-      "src": "Universal_Emblem_tiny.png",
-      "type": "image/png",
+      "src": "Universal_Emblem_tiny.gif",
+      "type": "image/gif",
       "sizes": "512x512"
     }
   ],

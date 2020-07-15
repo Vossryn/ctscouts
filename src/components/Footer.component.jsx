@@ -45,7 +45,7 @@ export default function Footer() {
         <footer className={classes.root}>
             <div className={classes.container}>
                 <Typography variant="body2" className={classes.copyright}>
-                    &copy; 2019 Croatan Trails District | 
+                    &copy; 2020 Croatan Trails District | 
                     <Link
                         target="_blank"
                         rel="noopener"

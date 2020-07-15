@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
         marginBottom: "-2px"
     },
     site_banner: {
-        height: "250px"
+        width: "100%"
     }
 }));
 
