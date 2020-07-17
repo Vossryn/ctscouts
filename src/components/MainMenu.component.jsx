@@ -98,6 +98,7 @@ export default function MainMenu(props) {
                     {
                         menuItems.map((item, index) => (
                             <Tab
+                                className="menu-item"
                                 icon={item.icon}
                                 label={item.label}
                                 component={RouterLink}

@@ -36,9 +36,9 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-//CSS
-
+  // .menu-item.MuiTab-root {
+  //   font-size: 10px;
+  // }
 }
 
 /* 
@@ -47,9 +47,9 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-//CSS
-
+  // .MuiTabs-centered a .MuiTab-wrapper {
+  //   font-size: 10px;
+  // }
 }
 
 /* 
@@ -58,9 +58,9 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-
-//CSS
-
+  .MuiTabs-centered a .MuiTab-wrapper {
+    font-size: 10px;
+  }
 }
 
 /* 
@@ -69,7 +69,7 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-
-//CSS
-
+  .MuiTabs-centered a .MuiTab-wrapper {
+    font-size: 10px;
+  }
 }
