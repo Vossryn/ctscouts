@@ -12,7 +12,7 @@ const useStyles = makeStyles({
         color: "#ffffff"
     },
     container: {
-        widht: "100%",
+        width: "100%",
         height: "100%",
         position: "relative"
     },
@@ -33,8 +33,7 @@ const useStyles = makeStyles({
         color: "#FFFFFF"
     },  
     icons: {
-        marginBottom: "-5px",
-        marginRight: "10px"
+        marginBottom: "-2px"
     }
 });
 
@@ -44,7 +43,7 @@ export default function Footer() {
     return (
         <footer className={classes.root}>
             <div className={classes.container}>
-                <Typography variant="body2" className={classes.copyright}>
+                <Typography variant="caption" className={classes.copyright}>
                     &copy; 2020 Croatan Trails District | 
                     <Link
                         target="_blank"
@@ -54,11 +53,11 @@ export default function Footer() {
                         className={classes.ecclink}
                     >
                         &nbsp;East Carolina Council
-                        <OpenInNewSharpIcon fontSize="small" className={classes.icons} />
+                        <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
                     </Link>
                 </Typography>
                 <Link 
-                    variant="body2"
+                    variant="caption"
                     href="mailto:vossryn+coratantrailswebmaster@gmail.com"
                     className={classes.webmaster}>
                     Webmaster: Britton Flynt

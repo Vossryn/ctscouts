@@ -19,17 +19,16 @@ const useStyles = makeStyles(theme => ({
 
     },
     content: {
-        height: "300px"
+        minHeight: "320px"
     },
     icons: {
         marginBottom: "-2px"
     },
     imageContainer: {
-        textAlign: "center",
-        paddingTop: "20px"
+        textAlign: "center"
     },
     image: {
-        height: "150px"
+        width: "100%"
     }
 }));
 

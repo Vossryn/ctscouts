@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     },
     boldText: {
         fontWeight: "bold"
+    },
+    wordWrap: {
+        overflowWrap: "break-word"
     }
 }));
 
@@ -198,7 +201,7 @@ export default function CalendarPage() {
                         </Typography>
                     </li>
                     <li>
-                        <Typography variant="body2">
+                        <Typography variant="body2" className={classes.wordWrap}>
                             If you need the ICAL, https://www.google.com/calendar/ical/croatantrails%40gmail.com/public/basic.ics
                         </Typography>
                     </li>

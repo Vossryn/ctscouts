@@ -10,9 +10,9 @@ import DownloadNowBlock from '../../components/DownloadNowBlock.component';
 import './styles.grid.scss';
 
 import SiteBanner from '../../assets/images/site_banner.png';
-import BSALogo from '../../assets/images/BSALogo.jpg';
-import CubScoutsLogo from '../../assets/images/CubScoutsLogo.jpg';
-import ScoutsBSALogo from '../../assets/images/ScoutsBSALogo.jpg';
+import BSALogoCombined from '../../assets/images/BSALogoCombined.png';
+import CubScoutsLogoCombined from '../../assets/images/CubScoutsLogoCombined.png';
+import ScoutsBSALogoCombined from '../../assets/images/ScoutsBSALogoCombined.png';
 
 const useStyles = makeStyles(theme => ({
     bsah4: {
@@ -37,21 +37,21 @@ const useStyles = makeStyles(theme => ({
 const cards = [
     {
         title: 'Cub Scouts',
-        img: CubScoutsLogo,
+        img: CubScoutsLogoCombined,
         content: 'Cub Scouting is a year-round program whose mission is to develop character and ethical decision-making skills for youth in kindergarten through fifth grades (5 to 10 years old).',
         link: 'https://beascout.scouting.org',
         linkText: 'Sign up today!'
     },
     {
         title: 'Boy Scouts',
-        img: BSALogo,
+        img: BSALogoCombined,
         content: 'Boy Scouting, is a year-round program for youth 11–17 designed to build character, citizenship, and personal fitness through a vigorous outdoor program and peer group leadership with the counsel of an adult Scoutmaster.',
         link: 'https://beascout.scouting.org',
         linkText: 'Sign up today!'
     },
     {
         title: 'Adult Leaders',
-        img: ScoutsBSALogo,
+        img: ScoutsBSALogoCombined,
         content: 'Behind every trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean and reverent Scout is a long line of committed volunteers who share those same traits. Volunteering has always been the very bedrock of the Scouting program. Watching kids grow is one thing — leading them through the process is a whole new experience all together.',
         link: 'https://beascout.scouting.org/Volunteer.aspx',
         linkText: 'Become a Leader!'
