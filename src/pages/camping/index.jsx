@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
-import Skeleton from '@material-ui/lab/Skeleton';
+import PageBanner from '../../assets/images/camping_banner.png';
 
 import './styles.grid.scss';
 
@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => ({
     },
     icons: {
         marginBottom: "-2px"
+    },
+    banner: {
+        width: "100%"
     }
 }));
 
@@ -41,7 +44,9 @@ export default function CampingPage() {
     return (
         <div className="grid-camping-container">
             <div className="grid-camping-header-image">
-                <Skeleton variant="rect" height={250}></Skeleton>
+                <img className={classes.banner}
+                    src={PageBanner}
+                    alt=""/>
             </div>
             <div className="grid-camping-about">
                 <Typography variant="h4" className={classes.bsah4}>

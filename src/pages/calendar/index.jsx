@@ -5,10 +5,10 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
-import Skeleton from '@material-ui/lab/Skeleton';
-
 import BigCalendar from './BigCalendar.component';
 import DownloadNowBlock from '../../components/DownloadNowBlock.component';
+
+import PageBanner from '../../assets/images/calendar_banner.png';
 
 import './styles.grid.scss';
 
@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     },
     wordWrap: {
         overflowWrap: "break-word"
+    },
+    banner: {
+        width: "100%"
     }
 }));
 
@@ -59,7 +62,9 @@ export default function CalendarPage() {
     return (        
         <div className="grid-calendar-container">
             <div className="grid-calendar-header-image">
-                <Skeleton variant="rect" height={250}></Skeleton>
+                <img className={classes.banner}
+                    src={PageBanner}
+                    alt=""/>
             </div>
             <div className="grid-event-bar">
                 <Typography variant="h4" className={classes.bsah4}>

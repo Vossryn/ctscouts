@@ -3,9 +3,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 
-import Skeleton from '@material-ui/lab/Skeleton';
-
 import Datagrid from './datagrid.component';
+
+import PageBanner from '../../assets/images/find_a_unit_banner.png';
 
 import './styles.grid.scss';
 
@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
     },
     hrmargin: {
         marginTop: "0px"
+    },
+    banner: {
+        width: "100%"
     }
 }));
 
@@ -58,7 +61,9 @@ export default function FindaunitPage() {
     return (
         <div className="grid-findaunit-container">
             <div className="grid-findaunit-header-image">
-                <Skeleton variant="rect" height={250}></Skeleton>
+                <img className={classes.banner}
+                    src={PageBanner}
+                    alt=""/>
             </div>
             <div className="grid-join-today">
                 <Typography variant="h4" className={classes.bsah4}>

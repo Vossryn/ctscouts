@@ -8,7 +8,7 @@ import Link from '@material-ui/core/Link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import OpenInNewSharpIcon from '@material-ui/icons/OpenInNewSharp';
 
-import Skeleton from '@material-ui/lab/Skeleton';
+import PageBanner from '../../assets/images/resources_banner.png';
 
 import Resourcelinks from './ResourceLinks.component';
 
@@ -42,6 +42,9 @@ const useStyles = makeStyles(theme => ({
     downloads: {
         padding: "10px",
         backgroundColor: "#fff7f0"
+    },
+    banner: {
+        width: "100%"
     }
 }));
 
@@ -62,7 +65,9 @@ export default function CampingPage() {
     return (
         <div className="grid-resources-container">
             <div className="grid-resources-header-image">
-                <Skeleton variant="rect" height={250}></Skeleton>
+                <img className={classes.banner}
+                    src={PageBanner}
+                    alt=""/>
             </div>
             <div className="grid-resources-about">
                 <Typography variant="h4" className={classes.bsah4}>
