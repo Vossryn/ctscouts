@@ -43,7 +43,7 @@ export default function Footer() {
     return (
         <footer className={classes.root}>
             <div className={classes.container}>
-                <Typography variant="caption" className={classes.copyright}>
+                <Typography id="copyright" variant="caption" className={classes.copyright}>
                     &copy; 2020 Croatan Trails District | 
                     <Link
                         target="_blank"
@@ -57,6 +57,7 @@ export default function Footer() {
                     </Link>
                 </Typography>
                 <Link 
+                    id="webmaster"
                     variant="caption"
                     href="mailto:vossryn+coratantrailswebmaster@gmail.com"
                     className={classes.webmaster}>
