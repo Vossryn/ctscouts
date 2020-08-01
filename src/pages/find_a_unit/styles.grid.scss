@@ -32,6 +32,10 @@
     grid-area: 5 / 1 / 6 / 13;
   }
 
+  #hideSpan {
+    display: none;
+  }
+
 }
 
 /* 
@@ -66,6 +70,10 @@
 
   .data-grid-3 {
     grid-area: 5 / 1 / 6 / 13;
+  }
+
+  #hideSpan {
+    display: none;
   }
 
 }
@@ -104,6 +112,10 @@
     grid-area: 5 / 1 / 6 / 13;
   }
 
+  #hideSpan {
+    display: none;
+  }
+
 }
 
 /* 
@@ -138,6 +150,10 @@
 
   .data-grid-3 {
     grid-area: 5 / 1 / 6 / 13;
+  }
+
+  #hideSpan {
+    display: none;
   }
 
 }
@@ -176,6 +192,10 @@
     grid-area: 5 / 1 / 6 / 13;
   }
 
+  #hideSpan {
+    display: block;
+  }
+
 }
 
 /* 
@@ -210,6 +230,10 @@
 
   .data-grid-3 {
     grid-area: 5 / 1 / 6 / 13;
+  }
+
+  #hideSpan {
+    display: block;
   }
 
 }

@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
     },
     banner: {
         width: "100%"
+    },
+    gridScrolSpan: {
+        color: "#a9a9a9"
     }
 }));
 
@@ -99,12 +102,21 @@ export default function FindaunitPage() {
                 </ul>
             </div>
             <div className="data-grid-1">
+                <Typography id="hideSpan" className={classes.gridScrolSpan} variant="caption">
+                    ** Scroll Grid left/right for more information
+                </Typography>
                 <Datagrid type="cub" tableHeader="Cub Scout Pack Info" rows={cubScoutData} />
             </div>
             <div className="data-grid-2">
+                <Typography id="hideSpan" className={classes.gridScrolSpan} variant="caption">
+                    ** Scroll Grid left/right for more information
+                </Typography>
                 <Datagrid type="boy" tableHeader="Boy Scouts Troop Info" rows={boyScoutData} />
             </div>
             <div className="data-grid-3">
+                <Typography id="hideSpan" className={classes.gridScrolSpan} variant="caption">
+                    ** Scroll Grid left/right for more information
+                </Typography>
                 <Datagrid type="sea" tableHeader="Sea Scout Info" rows={seaScoutData} />
             </div>
         </div>
