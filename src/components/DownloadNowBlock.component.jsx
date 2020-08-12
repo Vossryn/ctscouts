@@ -44,6 +44,59 @@ export default function Footer(props) {
 
     const { customEntries } = props;
 
+    const downloads = [
+        {
+            text: "2020 ITOLS",
+            link: "downloads/pdf/2020_ITOLS_Specific_Registration.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "LNT Trainer Course",
+            link: "downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "2020 District Calendar",
+            link: "downloads/pdf/calendar_CTD_2020.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "2019 Merit Badge Counselors",
+            link: "downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "2019 District Calendar",
+            link: "downloads/pdf/calendar_CTD_2019.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "BSA Application (English)",
+            link: "downloads/pdf/524-406A.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "BSA Application (Spanish)",
+            link: "downloads/pdf/524-423.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "Camping Acknowledgement Form",
+            link: "downloads/pdf/ECC_Camping_Acknowledgement_form.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "Stmt Resuming Activities 8-6-2020",
+            link: "downloads/pdf/ECC_Stmt_Resuming_activities_8-6-2020.pdf",
+            iconType: "PictureAsPdfIcon"
+        },
+        {
+            text: "Unit Activity Rental Form-COVID 19",
+            link: "downloads/pdf/ECC_Unit_Activity_Rental_Form-COVID_19_B.pdf",
+            iconType: "PictureAsPdfIcon"
+        }
+    ]
+
     return (
         <Paper elevation={2} className={classes.downloadsection}>
             <div>
@@ -57,90 +110,21 @@ export default function Footer(props) {
                 </div>
                 <div>
                     <ul className={classes.downloadnowlist}>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="2020 ITOLS"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                2020 ITOLS
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="LNT Trainer Course"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                LNT Trainer Course
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/calendar_CTD_2020.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="2020 District Calendar"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                2020 District Calendar
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="2019 Merit Badge Counselors"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                2019 Merit Badge Counselors
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/calendar_CTD_2019.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="2019 District Calendar"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                2019 District Calendar
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/524-406A.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="BSA Application (English)"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                BSA Application (English)
-                            </Link>
-                        </li>
-                        <li className={classes.downloadnowitem}>
-                            <Link
-                                variant="body2"
-                                href="downloads/pdf/524-423.pdf"
-                                target="_blank"
-                                rel="noopener"
-                                title="BSA Application (Spanish)"
-                            >
-                                <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                                BSA Application (Spanish)
-                            </Link>
-                        </li>
+                        {downloads.map((item, index) => (
+                            <li className={classes.downloadnowitem} key={index}>
+                                <Link
+                                    variant="body2"
+                                    target="_blank"
+                                    rel="noopener"
+                                    href={item.link}
+                                    title={item.text}
+                                >
+                                    {(item.iconType === "OpenInNewSharpIcon") ? <OpenInNewSharpIcon fontSize="small" className={classes.icons} /> : null}
+                                    {(item.iconType === "PictureAsPdfIcon") ? <PictureAsPdfIcon fontSize="small" className={classes.icons} /> : null}
+                                    {item.text}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div>
@@ -179,8 +163,8 @@ export default function Footer(props) {
                         </div>
                         <div>
                             <ul className={classes.downloadnowlist}>
-                                {entry.items.map(item => (
-                                    <li className={classes.downloadnowitem}>
+                                {entry.items.map((item, index) => (
+                                    <li className={classes.downloadnowitem} key={index}>
                                         <Link
                                             variant="body2"
                                             target="_blank"

@@ -226,6 +226,36 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
+                        href="downloads/pdf/ECC_Camping_Acknowledgement_form.pdf"
+                        title="Camping Acknowledgement Form"
+                    >
+                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                        Camping Acknowledgement Form
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
+                        href="downloads/pdf/ECC_Stmt_Resuming_activities_8-6-2020.pdf"
+                        title="Stmt Resuming Activities 8-6-2020"
+                    >
+                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                        Stmt Resuming Activities 8-6-2020
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
+                        href="downloads/pdf/ECC_Unit_Activity_Rental_Form-COVID_19_B.pdf"
+                        title="Unit Activity Rental Form-COVID 19"
+                    >
+                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                        Unit Activity Rental Form-COVID 19
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
                         href="https://filestore.scouting.org/filestore/pdf/512-927_fillable.pdf"
                         title="Eagle Scout Project Workbook"
                     >

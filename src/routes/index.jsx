@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-// import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 
 import Home from "../pages/home";
