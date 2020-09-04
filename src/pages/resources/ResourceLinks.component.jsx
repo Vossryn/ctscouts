@@ -158,6 +158,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf"
                         title="2020 ITOLS"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2020 ITOLS
@@ -168,6 +170,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf"
                         title="LNT Trainer Course"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         LNT Trainer Course
@@ -178,6 +182,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/calendar_CTD_2020.pdf"
                         title="2020 District Calendar"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2020 District Calendar
@@ -188,6 +194,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/2019%20CT%20Merit%20Badge%20Counselors.pdf"
                         title="2019 Merit Badge Counselors"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2019 Merit Badge Counselors
@@ -198,6 +206,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/calendar_CTD_2019.pdf"
                         title="2019 District Calendar"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         2019 District Calendar
@@ -208,6 +218,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/524-406A.pdf"
                         title="BSA Application (English)"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         BSA Application (English)
@@ -218,6 +230,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/524-423.pdf"
                         title="BSA Application (Spanish)"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         BSA Application (Spanish)
@@ -228,6 +242,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/ECC_Camping_Acknowledgement_form.pdf"
                         title="Camping Acknowledgement Form"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         Camping Acknowledgement Form
@@ -238,6 +254,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/ECC_Stmt_Resuming_activities_8-6-2020.pdf"
                         title="Stmt Resuming Activities 8-6-2020"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         Stmt Resuming Activities 8-6-2020
@@ -248,6 +266,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="downloads/pdf/ECC_Unit_Activity_Rental_Form-COVID_19_B.pdf"
                         title="Unit Activity Rental Form-COVID 19"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfIcon fontSize="small" className={classes.icons} />
                         Unit Activity Rental Form-COVID 19
@@ -256,8 +276,22 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
+                        href="downloads/pdf/CT Meritbadge Counselors.pdf"
+                        title="CT Meritbadge Counselors"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
+                        CT Meritbadge Counselors
+                    </Link>
+                </li>
+                <li className={classes.resourceitem}>
+                    <Link
+                        variant="body2"
                         href="https://filestore.scouting.org/filestore/pdf/512-927_fillable.pdf"
                         title="Eagle Scout Project Workbook"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfOutlinedIcon fontSize="small" className={classes.icons} />
                         Eagle Scout Project Workbook
@@ -268,6 +302,8 @@ export default function CampingPage(props) {
                         variant="body2"
                         href="https://filestore.scouting.org/filestore/pdf/512-927_fillable.pdf"
                         title="Eagle Scout Application"
+                        target="_blank"
+                        rel="noopener"
                     >
                         <PictureAsPdfOutlinedIcon fontSize="small" className={classes.icons} />
                         Eagle Scout Application
