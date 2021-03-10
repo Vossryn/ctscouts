@@ -14,7 +14,7 @@ import ToolBar from '@material-ui/core/ToolBar';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1
+        width: "1680px"
     },
     toolbar: {
         color: '#003f87'
@@ -48,10 +48,14 @@ const StyledTableRow = withStyles((theme) => ({
 
 export default function Datagrid(props) {
     const classes = useStyles();
-    const { tableHeader, rows, type } = props;
+    const { tableHeader, rows } = props;
 
     return (
-        <TableContainer component={Paper} elevation={2}>
+        <TableContainer 
+            component={Paper} 
+            elevation={2}
+            className={classes.root}
+        >
             <ToolBar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.fontFamily}>
                     {tableHeader}
@@ -60,43 +64,43 @@ export default function Datagrid(props) {
             <Table className={classes.table} size="small" aria-label="data table">
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell>
-                            {
-                                (type === 'cub') ? 'Pack' :
-                                    (type === 'boy') ? 'Troop' :
-                                        'Ship'
-                            }
-                        </StyledTableCell>
-                        <StyledTableCell className={classes.leaderWidth}>
-                            {
-                                (type === 'cub') ? 'Cubmaster' :
-                                    (type === 'boy') ? 'Scoutmaster' :
-                                        'Advisor'
-                            }
-                        </StyledTableCell>
+                        <StyledTableCell>Unit</StyledTableCell>
+                        <StyledTableCell>County</StyledTableCell>
+                        <StyledTableCell>Type</StyledTableCell>
+                        <StyledTableCell>Day</StyledTableCell>
+                        <StyledTableCell>Time</StyledTableCell>
+                        <StyledTableCell>Location</StyledTableCell>
+                        <StyledTableCell>Address</StyledTableCell>
+                        <StyledTableCell>Main Contact</StyledTableCell>
                         <StyledTableCell>Phone</StyledTableCell>
-                        <StyledTableCell>Meeting Place</StyledTableCell>
-                        <StyledTableCell>Meeting Day</StyledTableCell>
-                        <StyledTableCell>Meeting Time</StyledTableCell>
-                        <StyledTableCell>Unit Commissioner Name</StyledTableCell>
+                        <StyledTableCell>Email</StyledTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row, index) => (
+                    {(rows.length) ? (rows.map((row, index) => (
                         <StyledTableRow key={index}>
-                            <StyledTableCell>{row.number}</StyledTableCell>
-                            <StyledTableCell>{row.master}</StyledTableCell>
-                            <StyledTableCell>{row.phone}</StyledTableCell>
-                            <StyledTableCell>{row.meetingPlace}</StyledTableCell>
-                            <StyledTableCell>{row.meetingDay}</StyledTableCell>
-                            <StyledTableCell>{row.meetingTime}</StyledTableCell>
-                            <StyledTableCell>{row.commissioner}</StyledTableCell>
+                            <StyledTableCell>{row.Unit}</StyledTableCell>
+                            <StyledTableCell>{row.County}</StyledTableCell>
+                            <StyledTableCell>{row.Type}</StyledTableCell>
+                            <StyledTableCell>{row.Day}</StyledTableCell>
+                            <StyledTableCell>{row.Time}</StyledTableCell>
+                            <StyledTableCell>{row.Location}</StyledTableCell>
+                            <StyledTableCell>{row.Address}</StyledTableCell>
+                            <StyledTableCell>{row.MainContact}</StyledTableCell>
+                            <StyledTableCell>{row.Phone}</StyledTableCell>
+                            <StyledTableCell>{row.Email}</StyledTableCell>
                         </StyledTableRow>
-                    ))}
+                    )))
+                    :
+                    <StyledTableRow>
+                        <StyledTableCell colSpan={10} align="center">
+                            Data Loading...    
+                        </StyledTableCell>
+                    </StyledTableRow>}
                 </TableBody>
                 <TableFooter>
                     <TableRow>
-                        <TableCell colSpan={7} align="center">
+                        <TableCell colSpan={10} align="center">
                             <Typography>
                                 To report changes or updates please contact&nbsp;
                                 <Link 

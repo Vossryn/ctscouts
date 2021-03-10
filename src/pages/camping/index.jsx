@@ -94,7 +94,7 @@ export default function CampingPage() {
                     campsites for units looking to visit the Crystal Coast. Sitting on 35 acres,
                     Camp Sam Hatcher is used for weekend outings by Cub Scout Packs, Boy Scout Troops,
                     Venturing Crews, and other non-Scouting groups. It also hosts an annual
-                    Croatan Trails Cub Scout Day Camp in addition to a variety of District events.
+                    Southern District Cub Scout Day Camp in addition to a variety of District events.
                     Although most campsites do have potable water, they are still considered primative.
                     A small restroom and cold shower facility, large program pavilion, and lodge are available upon request.
                 </Typography>

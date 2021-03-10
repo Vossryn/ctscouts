@@ -71,7 +71,7 @@ export default function CampingPage() {
             </div>
             <div className="grid-resources-about">
                 <Typography variant="h4" className={classes.bsah4}>
-                    Croatan Trails Scout Resources
+                    Southern District of ECC Scout Resources
                 </Typography>
                 <hr className={classes.hrmargin}></hr>
                 <Typography variant="body1">
@@ -208,24 +208,12 @@ export default function CampingPage() {
                             </div>
                             <div>
                                 <Typography variant="body1">
-                                    <span className={classes.boldSpan}>When:</span> 1st Thursday each month at 7pm
+                                    <span className={classes.boldSpan}>When:</span> 3rd Thursday each month at 7pm
                                 </Typography>
                             </div>
                             <div>
                                 <Typography variant="body1">
-                                    <span className={classes.boldSpan}>Where:</span> The Church of Jesus Christ of
-                                    Latter-day Saints, 3606 Country Club Rd, Morehead City, NC (
-                                        <Link
-                                        variant="body2"
-                                        target="_blank"
-                                        rel="noopener"
-                                        href="https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en"
-                                        title="get directions"
-                                    >
-                                        get directions
-                                            <OpenInNewSharpIcon fontSize="inherit" className={classes.icons} />
-                                    </Link>
-                                    )
+                                    <span className={classes.boldSpan}>Where:</span> Zoom meeting
                                 </Typography>
                             </div>
                         </div>
@@ -851,7 +839,7 @@ export default function CampingPage() {
                             </div>
                             <div>
                                 <Typography variant="body1">
-                                    Croatan Trails District, OA Coree Chapter
+                                    Southern District of ECC, OA Coree Chapter
                                 </Typography>
                                 <ul>
                                     <li>

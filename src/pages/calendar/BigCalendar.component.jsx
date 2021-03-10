@@ -20,8 +20,6 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
-const ACCOUNT = "croatantrails@gmail.com";
-
 const useStyles = makeStyles(theme => ({
     dialogTitle: {
         padding: "30px 24px"
@@ -42,6 +40,7 @@ export default function BigCalendar() {
         rawEvents: [],
         eventsLoaded: false
     });
+
     const [startDate, setStartdate] = useState(moment(new Date()).subtract(2, "months").startOf('month').format("YYYY-MM-DDTHH:mm:ssZ"));
     const [endDate, setEnddate] = useState(moment(new Date()).add(2, "months").endOf('month').format("YYYY-MM-DDTHH:mm:ssZ"));
     const [open, setOpen] = useState(false);
@@ -49,17 +48,28 @@ export default function BigCalendar() {
 
     const getEvents = async () => {
         try {
-            let apiKey = `key=AIzaSyAL7eMleMrCrsGO6jsqRmHoAxxB-c_x1ZA`;
             let timeMin = `timeMin=${startDate}`;
             let timeMax = `timeMax=${endDate}`;
-            let URL = encodeURI(`https://content.googleapis.com/calendar/v3/calendars/${ACCOUNT}/events?singleEvents=true&${apiKey}&${timeMin}&${timeMax}`);
-            let res = await fetch(URL);
+            const baseUrl = `https://www.googleapis.com/calendar/v3/calendars/${process.env.REACT_APP_GOOGLE_ACCOUNT_NAME}/events`
+            let URL = encodeURI(baseUrl + `?key=${process.env.REACT_APP_GOOGLE_CLIENT_API_KEY}&${timeMin}&${timeMax}`);
+            let res = await fetch(URL, { mode: 'cors' });
             res = await res.json();
             let rawEvents = res.items
             if (typeof rawEvents !== 'undefined') {
                 let eventsList = rawEvents.map(dataItem => {
-                    let startDateTime = (dataItem.start.dateTime && dataItem.start.dateTime.includes('T')) ? dataItem.start.dateTime : `${dataItem.start.dateTime}T00:00:00Z`;
-                    let endDateTime = (dataItem.end.dateTime && dataItem.end.dateTime.includes('T')) ? dataItem.end.dateTime : `${dataItem.end.dateTime}T23:59:59Z`;
+                    let startDateTime, endDateTime;
+                    if(dataItem.start.date){
+                        startDateTime = `${dataItem.start.date} 00:00:00`;
+                    }
+                    if(dataItem.start.dateTime){
+                        startDateTime = (dataItem.start.dateTime && dataItem.start.dateTime.includes('T')) ? dataItem.start.dateTime : `${dataItem.start.dateTime}T00:00:00Z`;
+                    }
+                    if(dataItem.end.date){
+                        endDateTime = `${dataItem.end.date} 23:59:59`;
+                    }
+                    if(dataItem.end.dateTime){
+                        endDateTime = (dataItem.end.dateTime && dataItem.end.dateTime.includes('T')) ? dataItem.end.dateTime : `${dataItem.end.dateTime}T23:59:59Z`;
+                    }
                     return {
                         id: dataItem.id,
                         title: dataItem.summary,
@@ -68,6 +78,7 @@ export default function BigCalendar() {
                         allDay: (dataItem.start.dateTime && !dataItem.start.dateTime.includes('T'))
                     }
                 })
+                console.log(eventsList);
                 setEvents({ eventsList, rawEvents, eventsLoaded: true });
             }
         } catch (error) {

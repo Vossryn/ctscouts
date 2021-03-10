@@ -46,16 +46,6 @@ export default function Footer(props) {
 
     const downloads = [
         {
-            text: "2020 ITOLS",
-            link: "downloads/pdf/2020_ITOLS_Specific_Registration.pdf",
-            iconType: "PictureAsPdfIcon"
-        },
-        {
-            text: "LNT Trainer Course",
-            link: "downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf",
-            iconType: "PictureAsPdfIcon"
-        },
-        {
             text: "2020 District Calendar",
             link: "downloads/pdf/calendar_CTD_2020.pdf",
             iconType: "PictureAsPdfIcon"
@@ -151,8 +141,8 @@ export default function Footer(props) {
                         </li>
                     </ul>
                 </div>
-                {(typeof customEntries === 'undefined') ? null : customEntries.map(entry => (
-                    <div>
+                {(typeof customEntries === 'undefined') ? null : customEntries.map((entry, index) => (
+                    <div key={index}>
                         <div>
                             <Typography
                                 variant="body1"

@@ -44,7 +44,7 @@ export default function Footer() {
         <footer className={classes.root}>
             <div className={classes.container}>
                 <Typography id="copyright" variant="caption" className={classes.copyright}>
-                    &copy; 2020 Croatan Trails District | 
+                    &copy; 2021 Southern District of ECC | 
                     <Link
                         target="_blank"
                         rel="noopener"

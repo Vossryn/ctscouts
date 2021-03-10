@@ -102,23 +102,14 @@ export default function CalendarPage() {
                     <li>
                         <Typography variant="body1">
                             <span className={classes.boldText}>When: </span>
-                            1st Thursday each month at 7pm
+                            3rd Thursday each month at 7pm
                         </Typography>
                     </li>
                     <li>
                         <Typography variant="body1">
                             <span className={classes.boldText}>Where: </span>
-                            The Church of Jesus Christ of Latter-day Saints, 3606 Country Club Rd, Morehead City, NC
+                            Zoom meeting
                         </Typography>
-                        <Link 
-                            variant="body2"
-                            target="_blank"
-                            rel="noopener"
-                            href={"https://www.google.com/maps/place/The+Church+of+Jesus+Christ+of+Latter-day+Saints/@34.738165,-76.762269,725m/data=!3m2!1e3!4b1!4m7!1m4!3m3!1s0x89a89393d9fc9773:0xeebbae3a32f1bf76!2s3606+Country+Club+Rd,+Morehead+City,+NC+28557!3b1!3m1!1s0x89a89393b26e3ddf:0x103aa4bd891320f2!6m1!1e1?hl=en"}
-                            title="Get Directions - The Church of Jesus Christ of Latter-day Saints, 3606 Country Club Rd, Morehead City, NC"
-                        >
-                            Get Directions <OpenInNewSharpIcon fontSize="inherit" />
-                        </Link>
                     </li>
                     <li>
                         <Typography variant="body1">
@@ -166,15 +157,15 @@ export default function CalendarPage() {
                     <li>
                         <Typography variant="body1">
                             <span className={classes.boldText}>When: </span>
-                            Last Thursday each month at 7pm
+                            2nd Thursday each month at 7pm
                         </Typography>
                     </li>
                     <li>
                         <Typography variant="body1">
                             <span className={classes.boldText}>Where: </span>
-                            Scout Hut at 167 Howard Blvd, Newport, NC
+                            Zoom meetings
                         </Typography>
-                        <Link 
+                        {/* <Link 
                             variant="body2"
                             target="_blank"
                             rel="noopener"
@@ -182,7 +173,7 @@ export default function CalendarPage() {
                             title="Get Directions - Scout Hut at 167 Howard Blvd, Newport, NC"
                         >
                             Get Directions <OpenInNewSharpIcon fontSize="inherit" />
-                        </Link>
+                        </Link> */}
                     </li>
                 </ul>
             </div>
@@ -202,12 +193,12 @@ export default function CalendarPage() {
                 <ul>
                     <li>
                         <Typography variant="body1">
-                            For Google Calendars, simply add "croatantrails@gmail.com"
+                            For Google Calendars, simply add "southerndistictecc@gmail.com"
                         </Typography>
                     </li>
                     <li>
                         <Typography variant="body2" className={classes.wordWrap}>
-                            If you need the ICAL, https://www.google.com/calendar/ical/croatantrails%40gmail.com/public/basic.ics
+                            If you need the ICAL, https://calendar.google.com/calendar/ical/southerndistictecc%40gmail.com/public/basic.ics
                         </Typography>
                     </li>
                 </ul>

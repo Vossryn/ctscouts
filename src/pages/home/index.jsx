@@ -70,11 +70,11 @@ export default function HomePage() {
             </div>
             <div className="grid-body-1">
                 <Typography variant="h4" className={classes.bsah4}>
-                    Welcome to Croatan Trails!
+                    Welcome to Southern District of ECC!
                         </Typography>
                 <hr className={classes.hrmargin} />
                 <Typography variant="h6">
-                    Located along the Crystal Coast in eastern North Carolina, the Croatan Trails (CT) District is one of nine making up the East Carolina Council, and serves Carteret and east Craven Counties, and is home to Coree Chapter of the Order of the Arrow.
+                    Located along the Crystal Coast in eastern North Carolina, the Southern District is one of nine making up the East Carolina Council, and serves Carteret and east Craven Counties, and is home to Coree Chapter of the Order of the Arrow.
                         </Typography>
                 <Link
                     variant="body2"
