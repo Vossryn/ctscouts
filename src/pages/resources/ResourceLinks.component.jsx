@@ -156,30 +156,6 @@ export default function CampingPage(props) {
                 <li className={classes.resourceitem}>
                     <Link
                         variant="body2"
-                        href="downloads/pdf/2020_ITOLS_Specific_Registration.pdf"
-                        title="2020 ITOLS"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                        2020 ITOLS
-                    </Link>
-                </li>
-                <li className={classes.resourceitem}>
-                    <Link
-                        variant="body2"
-                        href="downloads/pdf/2020_Leave_No_Trace_Trainer_Course.pdf"
-                        title="LNT Trainer Course"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <PictureAsPdfIcon fontSize="small" className={classes.icons} />
-                        LNT Trainer Course
-                    </Link>
-                </li>
-                <li className={classes.resourceitem}>
-                    <Link
-                        variant="body2"
                         href="downloads/pdf/calendar_CTD_2020.pdf"
                         title="2020 District Calendar"
                         target="_blank"

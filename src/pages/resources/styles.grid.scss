@@ -1,3 +1,21 @@
+.contact-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  .contact-cards-card {
+    margin: 0.5rem;
+    width: 370px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -25,6 +43,10 @@
    
     .grid-resources-expansion-panels-1 {
       grid-area: 3 / 4 / 5 / 13;
+    }
+
+    .grid-resources-district-contacts {
+      grid-area: 5 / 1 / 6 / 13;
     }
   }
 
@@ -58,6 +80,10 @@
       .grid-resources-expansion-panels-1 {
         grid-area: 3 / 4 / 5 / 13;
       }
+
+      .grid-resources-district-contacts {
+        grid-area: 5 / 1 / 6 / 13;
+      }
     }
     
   }
@@ -89,6 +115,10 @@
      
       .grid-resources-expansion-panels-1 {
         grid-area: 3 / 4 / 5 / 13;
+      }
+
+      .grid-resources-district-contacts {
+        grid-area: 5 / 1 / 6 / 13;
       }
     }
     
@@ -122,6 +152,10 @@
       .grid-resources-expansion-panels-1 {
         grid-area: 3 / 6 / 5 / 13;
       }
+
+      .grid-resources-district-contacts {
+        grid-area: 5 / 1 / 6 / 13;
+      }
     }
     
   }
@@ -154,6 +188,10 @@
       .grid-resources-downloads {
         grid-area: 4 / 1 / 5 / 13;
       }
+
+      .grid-resources-district-contacts {
+        grid-area: 5 / 1 / 6 / 13;
+      }
     }
     
   }
@@ -185,6 +223,10 @@
     
       .grid-resources-downloads {
         grid-area: 4 / 1 / 5 / 13;
+      }
+
+      .grid-resources-district-contacts {
+        grid-area: 5 / 1 / 6 / 13;
       }
     }
     

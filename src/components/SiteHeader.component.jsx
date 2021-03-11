@@ -49,7 +49,7 @@ export default function MainMenu() {
             <div className={classes.spacer}></div>
             <div className={classes.districtClassContainer}>
                 <Typography variant="h5" className={classes.districtClass}>
-                    Croatan Trails District&#44;
+                    Southern District of
                 </Typography>
                 <Typography variant="h5" className={classes.districtClass}>
                     East Carolina Council
