@@ -1125,6 +1125,7 @@ export default function CampingPage() {
                 <Typography variant="h6">
                   {dcc.FirstName} {dcc.LastName}
                 </Typography>
+                <hr />
                 <Typography variant="body1">
                   {dcc.Email}
                 </Typography>

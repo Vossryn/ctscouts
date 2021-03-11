@@ -50,17 +50,16 @@ export default function BigCalendar() {
       let rawEvents = res.items
       if (typeof rawEvents !== 'undefined') {
         let eventsList = rawEvents.map(dataItem => {
-          let startDateTime, endDateTime;
+          let startDateTime, endDateTime = null;
+          let val1 = 0, val2 = 0, val3 = 0;
           if (dataItem.start.date) {
+            val1 = parseInt(dataItem.start.date.split('-')[2]);
+            val2 = parseInt(dataItem.end.date.split('-')[2]);
+            val3 = val1 - val2;
             startDateTime = `${dataItem.start.date} 00:00:00`;
-          }
-          if (dataItem.start.dateTime) {
-            startDateTime = (dataItem.start.dateTime && dataItem.start.dateTime.includes('T')) ? dataItem.start.dateTime : `${dataItem.start.dateTime}T00:00:00Z`;
-          }
-          if (dataItem.end.date) {
             endDateTime = `${dataItem.end.date} 00:00:00`;
-          }
-          if (dataItem.end.dateTime) {
+          } else {
+            startDateTime = (dataItem.start.dateTime && dataItem.start.dateTime.includes('T')) ? dataItem.start.dateTime : `${dataItem.start.dateTime}T00:00:00Z`;
             endDateTime = (dataItem.end.dateTime && dataItem.end.dateTime.includes('T')) ? dataItem.end.dateTime : `${dataItem.end.dateTime}T23:59:59Z`;
           }
 
@@ -69,7 +68,8 @@ export default function BigCalendar() {
             title: dataItem.summary,
             start: new Date(startDateTime),
             end: new Date(endDateTime),
-            allDay: (dataItem.start.dateTime) ? false : true
+            allDay: (dataItem.start.dateTime) ? false : true,
+            multiDay: (val3 > 1 || val3 < -1) ? true : false
           }
         })
         console.log(eventsList);
@@ -88,7 +88,7 @@ export default function BigCalendar() {
 
   const onSelectEvent = (event) => {
     const rawEvent = events.rawEvents.find(dataItem => dataItem.id === event.id);
-    setSelectedEvent(rawEvent);
+    setSelectedEvent({ ...rawEvent, multiDay: event.multiDay });
     setOpen(true);
   }
 
@@ -135,7 +135,7 @@ export default function BigCalendar() {
                 <EventIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={selectedEvent?.summary} />
+            <ListItemText primary={selectedEvent.summary} />
           </ListItem>
           <ListItem>
             <ListItemAvatar>
@@ -143,14 +143,24 @@ export default function BigCalendar() {
                 <AccessTimeIcon />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={convertTimeStamp(selectedEvent?.start?.dateTime)} />
+            {
+              (selectedEvent?.start?.date) ?
+                <ListItemText primary={convertTimeStamp(selectedEvent?.start?.date)} />
+                :
+                <ListItemText primary={convertTimeStamp(selectedEvent?.start?.dateTime)} />
+            }
           </ListItem>
-          {(selectedEvent?.allDay && selectedEvent?.allDay !== '' && selectedEvent?.start?.dateTime === selectedEvent?.end?.dateTime) ? (
+          {(selectedEvent?.multiDay) ? (
             <ListItem>
               <ListItemIcon>
                 &nbsp;
               </ListItemIcon>
-              <ListItemText primary={convertTimeStamp(selectedEvent?.end?.dateTime)} />
+              {
+                (selectedEvent?.end?.date) ?
+                  <ListItemText primary={convertTimeStamp(selectedEvent?.end?.date)} />
+                  :
+                  <ListItemText primary={convertTimeStamp(selectedEvent?.end?.dateTime)} />
+              }
             </ListItem>)
             :
             null}
@@ -161,7 +171,7 @@ export default function BigCalendar() {
                   <LocationOnIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary={selectedEvent?.location} />
+              <ListItemText primary={selectedEvent.location} />
             </ListItem>)
             :
             null}
@@ -172,7 +182,7 @@ export default function BigCalendar() {
                   <SubjectIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary={selectedEvent?.description} />
+              <ListItemText primary={selectedEvent.description} />
             </ListItem>)
             :
             null}
