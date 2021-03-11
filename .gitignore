@@ -24,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /new_district_changes
+package-lock.json
