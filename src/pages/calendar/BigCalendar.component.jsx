@@ -4,7 +4,6 @@ import moment from 'moment';
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
@@ -59,17 +58,18 @@ export default function BigCalendar() {
             startDateTime = (dataItem.start.dateTime && dataItem.start.dateTime.includes('T')) ? dataItem.start.dateTime : `${dataItem.start.dateTime}T00:00:00Z`;
           }
           if (dataItem.end.date) {
-            endDateTime = `${dataItem.end.date} 23:59:59`;
+            endDateTime = `${dataItem.end.date} 00:00:00`;
           }
           if (dataItem.end.dateTime) {
             endDateTime = (dataItem.end.dateTime && dataItem.end.dateTime.includes('T')) ? dataItem.end.dateTime : `${dataItem.end.dateTime}T23:59:59Z`;
           }
+
           return {
             id: dataItem.id,
             title: dataItem.summary,
             start: new Date(startDateTime),
             end: new Date(endDateTime),
-            allDay: (dataItem.start.dateTime && !dataItem.start.dateTime.includes('T'))
+            allDay: (dataItem.start.dateTime) ? false : true
           }
         })
         console.log(eventsList);
@@ -127,48 +127,57 @@ export default function BigCalendar() {
 
       <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
         <DialogTitle id="simple-dialog-title">Event Info</DialogTitle>
-        <DialogContent dividers>
-          <List aria-label="event information">
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <EventIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={(selectedEvent.summary) ? selectedEvent.summary : ''} />
-            </ListItem>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar>
-                  <AccessTimeIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={(selectedEvent.start) ? convertTimeStamp(selectedEvent.start.dateTime) : ''} />
-            </ListItem>
+
+        <List aria-label="event information">
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <EventIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={selectedEvent?.summary} />
+          </ListItem>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar>
+                <AccessTimeIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={convertTimeStamp(selectedEvent?.start?.dateTime)} />
+          </ListItem>
+          {(selectedEvent?.allDay && selectedEvent?.allDay !== '' && selectedEvent?.start?.dateTime === selectedEvent?.end?.dateTime) ? (
             <ListItem>
               <ListItemIcon>
                 &nbsp;
               </ListItemIcon>
-              <ListItemText primary={(selectedEvent.end) ? convertTimeStamp(selectedEvent.end.dateTime) : ''} />
-            </ListItem>
+              <ListItemText primary={convertTimeStamp(selectedEvent?.end?.dateTime)} />
+            </ListItem>)
+            :
+            null}
+          {(selectedEvent.location && selectedEvent.location !== '') ? (
             <ListItem>
               <ListItemAvatar>
                 <Avatar>
                   <LocationOnIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary={(selectedEvent.location) ? selectedEvent.location : ''} />
-            </ListItem>
+              <ListItemText primary={selectedEvent?.location} />
+            </ListItem>)
+            :
+            null}
+          {(selectedEvent.description && selectedEvent.description !== '') ? (
             <ListItem>
               <ListItemAvatar>
                 <Avatar>
                   <SubjectIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary={(selectedEvent.description) ? selectedEvent.description : ''} />
-            </ListItem>
-          </List>
-        </DialogContent>
+              <ListItemText primary={selectedEvent?.description} />
+            </ListItem>)
+            :
+            null}
+        </List>
+
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Close

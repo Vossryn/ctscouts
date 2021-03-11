@@ -45,12 +45,12 @@ export default function FindaunitPage() {
   const [ventureScoutData, setVentureScoutData] = useState([]);
   const [explorerPostsData, setExplorerPostsData] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [contactInfo, setContactInfo] = React.useState({});
-  const [openDialog, setOpenDialog] = React.useState(false);
+  const [contactInfo, setContactInfo] = useState({});
+  const [openDialog, setOpenDialog] = useState(false);
 
   const getData = async () => {
     Tabletop.init({
-      key: '1Gl-7qiIt1KaJ5ePYmHrkdJt05pn-f0YNOs8mAZYe9uc',
+      key: process.env.REACT_APP_GOOGLE_SHEET_ID,
       callback: googleData => {
         setCubScoutData(googleData["Cub Scouts"].elements);
         setScoutData(googleData["Scouts"].elements);

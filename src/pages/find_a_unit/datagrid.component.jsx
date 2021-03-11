@@ -99,14 +99,14 @@ export default function Datagrid(props) {
           )))
             :
             <StyledTableRow>
-              <StyledTableCell colSpan={7} align="center">
+              <StyledTableCell colSpan={8} align="center">
                 Data Loading...
                         </StyledTableCell>
             </StyledTableRow>}
         </TableBody>
         <TableFooter>
           <TableRow>
-            <TableCell colSpan={7} align="center">
+            <TableCell colSpan={8} align="center">
               <Typography>
                 To report changes or updates please contact&nbsp;
                                 <Link
